@@ -30,7 +30,7 @@
 
 | 스킬 / 저장소 | URL | 설명 |
 | --- | --- | --- |
-| multica-ai/andrej-karpathy-skills | https://github.com/multica-ai/andrej-karpathy-skills | Andrej Karpathy 스타일의 CLAUDE.md 기반 스킬 예시입니다. |
+| forrestchang/andrej-karpathy-skills | https://github.com/forrestchang/andrej-karpathy-skills | Andrej Karpathy 스타일의 CLAUDE.md 기반 스킬 예시입니다. |
 | 고급 12규칙 CLAUDE.md (Karpathy + 확장) | (내부 노트 / Obsidian) | Karpathy 4규칙 + 2026년 5월 에이전트·다단계 작업 대응 8규칙 추가. 실수율 41% → 3% 검증. 토큰 예산, 체크포인트, 충돌 처리, "크게 실패하라" 등 실전 규칙 포함. |
 | kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 스킬 예시입니다. |
 | Leonxlnx/taste-skill | https://github.com/Leonxlnx/taste-skill | 이미지와 디자인 감각을 보강하는 스킬입니다. |
