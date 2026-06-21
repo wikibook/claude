@@ -1,0 +1,25 @@
+# 1장 클로드와 일하는 시대
+
+> **책 1장** 독자를 위한 보충 자료입니다.
+> 클로드 기능 변화에 맞춰 지속적으로 업데이트합니다.
+
+> 처음 시작한다면 [시작하기 — 가입·설치 링크 모음](../../resources/시작하기.md)을 먼저 확인하세요.
+
+## 공식 문서
+
+| 문서 | URL | 설명 |
+| --- | --- | --- |
+| 클로드 지원 센터 | https://support.claude.com | 클로드 기능, 플랜, 문제 해결을 확인하는 공식 지원 허브입니다. |
+| 모델 개요 | https://docs.anthropic.com/en/docs/about-claude/models/overview | Opus, Sonnet, Haiku 등 클로드 모델의 차이를 확인할 수 있습니다. |
+| 앤트로픽 연구 | https://www.anthropic.com/research | 안전성, 해석가능성, 모델 연구 흐름을 살펴볼 수 있습니다. |
+
+## 추천 자료
+
+| 자료 | URL | 설명 |
+| --- | --- | --- |
+| Claude's Constitution | https://www.anthropic.com/constitution | 클로드가 어떤 원칙으로 응답하도록 설계되는지 이해하는 데 도움이 되는 공개 문서입니다. |
+| 앤트로픽 공식 블로그 | https://www.anthropic.com/news | 클로드 제품 업데이트와 회사 소식을 확인할 수 있습니다. |
+
+---
+
+*최종 업데이트: 2026-06-20*

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+  환율 계산기 — 『클로드 활용 입문서』 4장 예제 4.2~4.3 재현
+  책에서 클로드 아티팩트로 만든 도구를, 같은 동작으로 단일 HTML 파일에 담았습니다.
+  - 원화 ↔ 달러 / 원화 ↔ 엔화 드롭다운 선택
+  - 환율 직접 입력, 양방향 자동 변환
+  - 통화 페어별 입력값 독립 유지 (달러=초록, 엔화=빨강)
+  - 하단 환율 요약
+  인터넷 연결 없이 브라우저로 바로 열어 쓸 수 있습니다.
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환율 계산기</title>
+<style>
+  :root { --usd: #16a34a; --jpy: #dc2626; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: #f1f5f9; font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: #0f172a; padding: 24px;
+  }
+  .card {
+    background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(15,23,42,.08);
+    width: 100%; max-width: 380px; padding: 28px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: #64748b; font-size: 13px; margin-bottom: 20px; }
+  label { display: block; font-size: 13px; color: #475569; margin: 14px 0 6px; }
+  select, input {
+    width: 100%; padding: 12px 14px; font-size: 16px; border: 1px solid #cbd5e1;
+    border-radius: 12px; background: #fff; color: #0f172a;
+  }
+  input:focus, select:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  .field input { font-weight: 600; }
+  .field.krw input { border-left: 4px solid #334155; }
+  .field.foreign input { border-left: 4px solid var(--accent); color: var(--accent); }
+  .swap { text-align: center; color: #94a3b8; font-size: 18px; margin: 8px 0; }
+  .summary {
+    margin-top: 22px; padding-top: 18px; border-top: 1px dashed #e2e8f0;
+    font-size: 13px; color: #475569; line-height: 1.9;
+  }
+  .summary b { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="card" id="card">
+    <h1>환율 계산기</h1>
+    <div class="sub">환율을 직접 입력하고 금액을 양방향으로 변환합니다.</div>
+
+    <label for="pair">통화 선택</label>
+    <select id="pair">
+      <option value="USD">원화 ↔ 달러 (USD)</option>
+      <option value="JPY">원화 ↔ 엔화 (JPY)</option>
+    </select>
+
+    <label id="rateLabel" for="rate">환율</label>
+    <input id="rate" type="number" inputmode="decimal" step="0.1">
+
+    <div class="field krw">
+      <label for="krw">원화 (KRW)</label>
+      <input id="krw" type="number" inputmode="decimal" placeholder="0">
+    </div>
+    <div class="swap">⇅</div>
+    <div class="field foreign">
+      <label id="foreignLabel" for="foreign">달러 (USD)</label>
+      <input id="foreign" type="number" inputmode="decimal" placeholder="0">
+    </div>
+
+    <div class="summary" id="summary"></div>
+  </div>
+
+<script>
+  // 통화 페어별 상태를 따로 보관합니다(책 예제 4.3: "페어별 상태 유지").
+  const state = {
+    USD: { rate: 1479, krw: '', foreign: '', label: '달러 (USD)', symbol: '$', decimals: 2, accent: 'var(--usd)' },
+    JPY: { rate: 9.3,  krw: '', foreign: '', label: '엔화 (JPY)', symbol: '¥', decimals: 0, accent: 'var(--jpy)' },
+  };
+  let pair = 'USD';
+
+  const $ = (id) => document.getElementById(id);
+  const card = $('card'), rate = $('rate'), krw = $('krw'), foreign = $('foreign');
+
+  function fmt(n, decimals) {
+    if (n === '' || isNaN(n)) return '0';
+    return Number(n).toLocaleString('ko-KR', { maximumFractionDigits: decimals });
+  }
+
+  function render() {
+    const s = state[pair];
+    card.style.setProperty('--accent', s.accent);
+    document.querySelector('.field.foreign').style.setProperty('--accent', s.accent);
+    $('foreignLabel').textContent = s.label;
+    $('rateLabel').textContent = `환율 (₩ per ${s.symbol}1)`;
+    rate.value = s.rate;
+    krw.value = s.krw;
+    foreign.value = s.foreign;
+    const krw1000 = (1000 / s.rate);
+    $('summary').innerHTML =
+      `<div>${s.symbol}1 = <b>₩${fmt(s.rate, 1)}</b></div>` +
+      `<div>₩1,000 = <b>${s.symbol}${fmt(krw1000, s.decimals)}</b></div>`;
+  }
+
+  function fromKrw() {
+    const s = state[pair];
+    s.krw = krw.value;
+    s.foreign = krw.value === '' ? '' : (Number(krw.value) / s.rate).toFixed(s.decimals);
+    foreign.value = s.foreign;
+  }
+  function fromForeign() {
+    const s = state[pair];
+    s.foreign = foreign.value;
+    s.krw = foreign.value === '' ? '' : Math.round(Number(foreign.value) * s.rate).toString();
+    krw.value = s.krw;
+  }
+  function fromRate() {
+    const s = state[pair];
+    s.rate = Number(rate.value) || 0;
+    if (s.krw !== '') fromKrw(); else if (s.foreign !== '') fromForeign();
+    render();
+  }
+
+  krw.addEventListener('input', () => { fromKrw(); refreshSummary(); });
+  foreign.addEventListener('input', () => { fromForeign(); refreshSummary(); });
+  rate.addEventListener('input', fromRate);
+  $('pair').addEventListener('change', (e) => { pair = e.target.value; render(); });
+
+  function refreshSummary() {
+    const s = state[pair];
+    const krw1000 = (1000 / s.rate);
+    $('summary').innerHTML =
+      `<div>${s.symbol}1 = <b>₩${fmt(s.rate, 1)}</b></div>` +
+      `<div>₩1,000 = <b>${s.symbol}${fmt(krw1000, s.decimals)}</b></div>`;
+  }
+
+  render();
+</script>
+</body>
+</html>
