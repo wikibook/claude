@@ -3,37 +3,45 @@
 > **책 6장** 독자를 위한 보충 자료입니다.
 > 클로드 기능 변화에 맞춰 지속적으로 업데이트합니다.
 
-## 이 장에서 받을 수 있는 것
+6장은 클로드에게 더 큰 단위의 일을 맡기는 흐름과 플러그인 생태계를 다룹니다. 기능 변화에 따라
+바뀌는 화면 캡처 대신, **바로 따라 할 수 있는 워크플로우 프롬프트**와 계속 참고할 공식 문서·플러그인
+링크를 모았습니다.
 
-6장은 클로드에게 더 큰 단위의 일을 맡기는 흐름과 플러그인 생태계를 다룹니다.
-저장소에는 기능 변화에 따라 바뀌는 화면 캡처 대신, 계속 참고할 수 있는 공식 문서와 플러그인 링크를 모았습니다.
+## 실습 자산 — 코워크에 바로 붙여넣기
 
-| 자료 | 내용 | 책 연결 |
-| --- | --- | --- |
-| [플러그인 목록](../../plugins/README.md) | 책에서 언급한 플러그인과 설치 전 확인할 항목 | 6.2절 |
-| [공식 문서 링크](../../resources/공식문서-링크.md) | 클로드 코드, MCP, 스킬 관련 공식 문서 | 6장 이후 |
-| 실전 활용 사례 | 코워크를 제품·디자인 업무에 쓰는 예시 | 6.3절 |
+#### 🗂 실전 워크플로우 5가지 + 캠페인 브리프
+파일 통합 분석, 미팅 브리핑, 반복 보고서, 콘텐츠 대량 제작, 리서치 종합 — 6.3절의 다섯 가지
+워크플로우(예제 6.7~6.11)를 대괄호만 바꿔 쓸 수 있게 담았습니다. 처음이라면 **미팅 브리핑**부터
+시작하길 권합니다. 마케팅 플러그인 캠페인 예제(6.2)도 함께 있습니다.
+→ [프롬프트/실전-워크플로우.md](프롬프트/실전-워크플로우.md)
 
-> 플러그인은 클로드의 행동 범위와 연결 도구를 넓힙니다.
-> 설치 전에는 어떤 권한과 데이터를 다루는지 먼저 확인하세요.
+#### 👥 AI 팀 구성하기
+작업이 커지면 역할이 다른 여러 에이전트로 나눠 협업하게 합니다(6.3.6절). 에이전트의 네 가지
+구성 요소, 콘텐츠 프로덕션 4인 팀 설계, Research Agent 시스템 프롬프트(예제 6.12)를 정리했습니다.
+→ [프롬프트/ai-팀-구성.md](프롬프트/ai-팀-구성.md)
+
+> 플러그인은 클로드의 행동 범위와 연결 도구를 넓힙니다. 설치 전에는 어떤 권한과 데이터를 다루는지 먼저 확인하세요.
+> 저장소의 [플러그인 목록](../../plugins/README.md)(6.2절)과 [공식 문서 링크](../../resources/공식문서-링크.md)도 함께 참고하세요.
 
 ## 공식 문서
 
-| 문서 | URL | 설명 |
-| --- | --- | --- |
-| 클로드 지원 센터 | https://support.claude.com | 코워크와 클로드 기능 업데이트를 확인하는 출발점입니다. |
-| 클로드 코드 문서 | https://docs.anthropic.com/en/docs/claude-code | 클로드 코드와 플러그인 활용 맥락을 함께 확인할 수 있습니다. |
+#### 클로드 지원 센터
+코워크 기능과 업데이트를 확인하는 출발점입니다. 코워크가 보이지 않거나 승인 모드 설정이 궁금할 때 먼저 보세요.
+→ [support.claude.com](https://support.claude.com)
 
-## 추천 자료 — 플러그인
+#### 클로드 코드 문서
+코워크와 클로드 코드는 뿌리가 같습니다. 플러그인·자동화의 배경 맥락을 함께 확인하고 싶을 때 참고하세요.
+→ [클로드 코드 문서](https://docs.anthropic.com/en/docs/claude-code)
 
-| 자료 | URL | 설명 |
-| --- | --- | --- |
-| Superpowers | https://claude.com/plugins/superpowers | 개발 워크플로우 전반을 강화하는 클로드 코드 플러그인입니다. |
-| Frontend Design | https://claude.com/plugins/frontend-design | UI/UX 디자인과 프론트엔드 개발에 특화된 플러그인입니다. |
-| GitHub | https://claude.com/plugins/github | GitHub 저장소와 클로드 코드 작업을 연결합니다. |
-| Slack | https://claude.com/plugins/slack | 슬랙 워크스페이스와 클로드 작업 흐름을 연결합니다. |
-| anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 업무 플러그인 예시를 살펴볼 수 있는 앤트로픽 저장소입니다. |
-| openai/codex-plugin-cc | https://github.com/openai/codex-plugin-cc | 클로드 코드 플러그인 생태계 예시로 참고할 수 있는 저장소입니다. |
+## 플러그인
+
+명령어(`/`)나 자연어로 불러 쓰는 플러그인입니다. 처음에는 **지금 하는 일에 바로 도움이 되는 하나**로 시작하세요.
+
+- **[claude.com/plugins](https://claude.com/plugins)** — 공식 플러그인을 한눈에 볼 수 있는 허브. 어떤 플러그인이 있는지 여기서 먼저 둘러보세요.
+- **[Superpowers](https://claude.com/plugins/superpowers)** — 개발 워크플로우 전반을 강화하는 플러그인.
+- **[Frontend Design](https://claude.com/plugins/frontend-design)** — UI/UX 디자인과 프론트엔드 개발에 특화.
+- **[GitHub](https://claude.com/plugins/github)** · **[Slack](https://claude.com/plugins/slack)** — GitHub 저장소·슬랙 워크스페이스를 클로드 작업 흐름에 연결.
+- **[anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)** — 업무 플러그인 예시를 살펴볼 수 있는 앤트로픽 저장소.
 
 ## 실전 활용 사례 — 앤트로픽 디자인 리드 Jenny Wen의 코워크 활용법
 
@@ -46,8 +54,9 @@
 
 이 사례는 코워크가 단순한 채팅 도구를 넘어, 제품 팀이 일하는 방식을 어떻게 바꾸는지 보여주는 좋은 예시입니다.
 
-## 관련 코너
+## 더 읽어보기
 
-> 이 장에서 소개한 기능과 연결된 저장소 내 자료입니다.
-
-- [플러그인 목록](../../plugins/README.md) — 공식 플러그인 링크와 설치 가이드
+#### 에이전트가 얼마나 자율적으로 일할 수 있나
+코워크처럼 클로드가 여러 단계를 스스로 처리하는 흐름의 배경을, 앤트로픽이 조심스럽게 측정한 연구입니다.
+"어디까지 맡기고 어디서 사람이 확인해야 하는가"를 생각할 때 참고가 됩니다.
+→ [Measuring agent autonomy (앤트로픽 연구)](https://www.anthropic.com/research/measuring-agent-autonomy)
