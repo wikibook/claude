@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+  구독료 계산기 — 『클로드 활용 입문서』 3장 예제 3.2~3.3 재현
+  책에서 클로드 아티팩트로 만든 도구를, 같은 동작으로 단일 HTML 파일에 담았습니다.
+  - 서비스 이름 + 월 요금을 한 줄씩 추가/삭제 (Enter로도 추가)
+  - 월 합계와 연간 합계(월 × 12)를 상단 카드에 표시
+  - 항목마다 월간/연간 결제 선택, 연간은 12로 나눠 월 비용으로 환산해 합계에 반영
+  - 월 환산 기준 가장 비싼 구독은 👑 왕관과 노란 배경으로 강조
+  - 입력 내용은 브라우저에 자동 저장되어 다시 열어도 유지
+  인터넷 연결 없이 브라우저로 바로 열어 쓸 수 있습니다.
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구독료 계산기</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center;
+    background: #f1f5f9; font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: #0f172a; padding: 32px 16px;
+  }
+  .card {
+    background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(15,23,42,.08);
+    width: 100%; max-width: 460px; padding: 28px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: #64748b; font-size: 13px; margin-bottom: 20px; }
+
+  .totals { display: flex; gap: 12px; margin-bottom: 22px; }
+  .total {
+    flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .total .t-label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+  .total .t-value { font-size: 22px; font-weight: 700; }
+  .total.year .t-value { color: #2563eb; }
+
+  .inputs { display: grid; grid-template-columns: 1fr 110px; gap: 8px; }
+  .inputs input {
+    width: 100%; padding: 11px 12px; font-size: 15px; border: 1px solid #cbd5e1;
+    border-radius: 10px; background: #fff; color: #0f172a;
+  }
+  input:focus { outline: 2px solid #2563eb; border-color: transparent; }
+  .cycle { display: flex; gap: 6px; margin: 8px 0 4px; }
+  .cycle button {
+    flex: 1; padding: 8px; font-size: 13px; border: 1px solid #cbd5e1; border-radius: 10px;
+    background: #fff; color: #475569; cursor: pointer;
+  }
+  .cycle button.on { background: #0f172a; color: #fff; border-color: #0f172a; }
+  .add {
+    width: 100%; margin-top: 8px; padding: 11px; font-size: 15px; font-weight: 600;
+    border: none; border-radius: 10px; background: #2563eb; color: #fff; cursor: pointer;
+  }
+  .add:hover { background: #1d4ed8; }
+
+  ul { list-style: none; margin: 20px 0 0; padding: 0; }
+  li {
+    display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid #eef2f7; margin-bottom: 8px; transition: background .15s;
+  }
+  li.top { background: #fefce8; border-color: #fde68a; }
+  li .crown { font-size: 16px; width: 18px; }
+  li .name { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  li .amt { text-align: right; font-variant-numeric: tabular-nums; }
+  li .amt .per { font-size: 15px; font-weight: 600; }
+  li .amt .note { display: block; font-size: 11px; color: #94a3b8; }
+  li .del {
+    border: none; background: none; color: #cbd5e1; font-size: 16px; cursor: pointer;
+    opacity: 0; transition: opacity .15s; padding: 4px;
+  }
+  li:hover .del { opacity: 1; }
+  li .del:hover { color: #ef4444; }
+  .empty { color: #94a3b8; font-size: 14px; text-align: center; padding: 24px 0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>구독료 계산기</h1>
+    <div class="sub">매달·매년 나가는 구독료를 한눈에 정리합니다.</div>
+
+    <div class="totals">
+      <div class="total month">
+        <div class="t-label">월 합계</div>
+        <div class="t-value" id="monthTotal">₩0</div>
+      </div>
+      <div class="total year">
+        <div class="t-label">연간 합계</div>
+        <div class="t-value" id="yearTotal">₩0</div>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input id="name" type="text" placeholder="서비스 이름 (예: 넷플릭스)">
+      <input id="amount" type="number" inputmode="numeric" placeholder="금액">
+    </div>
+    <div class="cycle">
+      <button type="button" data-cycle="monthly" class="on">월간 결제</button>
+      <button type="button" data-cycle="yearly">연간 결제</button>
+    </div>
+    <button class="add" id="add">추가하기</button>
+
+    <ul id="list"></ul>
+    <div class="empty" id="empty">아직 추가한 구독이 없어요. 위에서 서비스를 추가해 보세요.</div>
+  </div>
+
+<script>
+  const KEY = 'subscription-calculator-items';
+  let items = load();
+  let cycle = 'monthly';
+
+  const $ = (id) => document.getElementById(id);
+  const nameEl = $('name'), amountEl = $('amount'), listEl = $('list'), emptyEl = $('empty');
+
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function save() { localStorage.setItem(KEY, JSON.stringify(items)); }
+
+  // 연간 결제는 12로 나눠 월 비용으로 환산합니다(책 예제 3.3).
+  const monthlyOf = (it) => it.cycle === 'yearly' ? it.amount / 12 : it.amount;
+  const won = (n) => '₩' + Math.round(n).toLocaleString('ko-KR');
+
+  function addItem() {
+    const name = nameEl.value.trim();
+    const amount = Number(amountEl.value);
+    if (!name || !amount || amount <= 0) return;
+    items.push({ name, amount, cycle });
+    save();
+    nameEl.value = ''; amountEl.value = ''; nameEl.focus();
+    render();
+  }
+
+  function removeItem(i) { items.splice(i, 1); save(); render(); }
+
+  function render() {
+    const monthly = items.reduce((sum, it) => sum + monthlyOf(it), 0);
+    $('monthTotal').textContent = won(monthly);
+    $('yearTotal').textContent = won(monthly * 12);
+
+    // 월 환산 기준 최고가 항목을 찾습니다.
+    let topIdx = -1, topVal = 0;
+    items.forEach((it, i) => { const m = monthlyOf(it); if (m > topVal) { topVal = m; topIdx = i; } });
+
+    emptyEl.style.display = items.length ? 'none' : 'block';
+    listEl.innerHTML = '';
+    items.forEach((it, i) => {
+      const li = document.createElement('li');
+      if (i === topIdx) li.className = 'top';
+      const note = it.cycle === 'yearly' ? `<span class="note">연 ${won(it.amount)} 결제</span>` : '';
+      li.innerHTML =
+        `<span class="crown">${i === topIdx ? '👑' : ''}</span>` +
+        `<span class="name">${escapeHtml(it.name)}</span>` +
+        `<span class="amt"><span class="per">${won(monthlyOf(it))} /월</span>${note}</span>` +
+        `<button class="del" title="삭제" aria-label="삭제">🗑</button>`;
+      li.querySelector('.del').addEventListener('click', () => removeItem(i));
+      listEl.appendChild(li);
+    });
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  $('add').addEventListener('click', addItem);
+  [nameEl, amountEl].forEach((el) => el.addEventListener('keydown', (e) => { if (e.key === 'Enter') addItem(); }));
+  document.querySelectorAll('.cycle button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      cycle = btn.dataset.cycle;
+      document.querySelectorAll('.cycle button').forEach((b) => b.classList.toggle('on', b === btn));
+    });
+  });
+
+  render();
+</script>
+</body>
+</html>
