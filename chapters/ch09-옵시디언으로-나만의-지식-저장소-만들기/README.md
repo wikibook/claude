@@ -23,11 +23,9 @@ vault-template/
 └── archive/           ← 더 이상 참조하지 않는 자료
 ```
 
-| 파일/폴더 | 내용 | 책 연결 |
-| --- | --- | --- |
-| `CLAUDE.md` | 폴더 구조·작성 규칙·소스 처리·질문·점검 규칙 | 9.3.3절 예제 9.2 |
-| 기본 폴더 4종 | `sources/`·`wiki/`·`daily/`·`archive/` | 9.3.2절 예제 9.1 |
-| `wiki/me/*` | 나에 대한 첫 위키 페이지(예시) | 9.3.4절 예제 9.3 |
+핵심은 세 가지입니다. **`CLAUDE.md`**는 폴더 구조·작성 규칙·소스 처리·질문·점검 규칙을 담은 '헌법'입니다(9.3.3절 예제 9.2).
+**기본 폴더 4종**(`sources/`·`wiki/`·`daily/`·`archive/`)이 볼트의 뼈대이고(9.3.2절 예제 9.1),
+**`wiki/me/`의 세 페이지**가 나에 대한 첫 위키 페이지 예시입니다(9.3.4절 예제 9.3).
 
 > `wiki/me/` 안의 세 페이지는 책의 예시 인물(프로덕트 매니저)로 채워 두었습니다.
 > **본인 정보로 바꿔 쓰세요.** "나 자신이 첫 번째 엔티티입니다"(책 9.3.4절).
@@ -39,15 +37,11 @@ vault-template/
 2. 터미널에서 볼트 폴더로 이동해 `claude`를 실행하고, 수집·정리를 요청합니다(책 예제 9.4).
 3. 주기적으로 "점검(lint)"을 요청해 모순·고아 페이지·중복을 정리합니다.
 
-## 추천 자료
+## 옵시디언 기본
 
-### 옵시디언 기본
-
-| 자료 | URL | 설명 |
-| --- | --- | --- |
-| 옵시디언 공식 사이트 | https://obsidian.md | 옵시디언의 기본 기능과 플러그인을 확인할 수 있습니다. |
-| 옵시디언 플러그인 마켓 | https://obsidian.md/plugins | 공식 커뮤니티 플러그인을 검색하고 설치할 수 있습니다. |
-| 옵시디언 웹 클리퍼 | https://obsidian.md/clipper | 웹 페이지를 옵시디언 노트로 바로 저장하는 브라우저 확장입니다. |
+- **[옵시디언 공식 사이트 (한국어)](https://obsidian.md/ko)** — 기본 기능과 플러그인을 한국어로 확인. 옵시디언 입문 자료로 먼저 보세요.
+- **[옵시디언 플러그인 마켓](https://obsidian.md/plugins)** — 공식 커뮤니티 플러그인을 검색·설치.
+- **[옵시디언 웹 클리퍼](https://obsidian.md/clipper)** — 웹 페이지를 옵시디언 노트로 바로 저장하는 브라우저 확장.
 
 ### 함께 쓰면 좋은 플러그인 후보
 
@@ -60,8 +54,16 @@ vault-template/
 | Templater | 반복 노트 양식을 템플릿으로 자동화합니다. |
 | Periodic Notes | 일간·주간·월간 노트를 정해진 형식으로 자동 생성합니다. |
 
-### 클로드 + 옵시디언 연계
+## 클로드와 함께 쓰기
 
-| 자료 | URL | 설명 |
-| --- | --- | --- |
-| kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 클로드 스킬 예시입니다. (kepano = Minimal 테마 제작자) |
+- **[개인 맥락 가져오기 (Import memory)](https://claude.com/import-memory)** — 그동안 쌓은 개인 맥락을 클로드로 옮기는 기능. 9장의 지식 이전·개인 맥락 관리와 바로 이어집니다.
+- **[kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)** — 옵시디언 작업에 특화된 클로드 스킬 예시(kepano = Minimal 테마 제작자).
+
+## 더 읽어보기
+
+옵시디언을 더 깊이 쓰거나, 마크다운 지식 저장소가 왜 AI와 잘 맞는지 이해하고 싶다면.
+
+- **[옵시디언 CLI 한국어 가이드](https://lucas-flatwhite.github.io/obsidian-cli-guide-ko)** — 옵시디언을 명령줄에서 더 깊이 다루는 한국어 확장 가이드.
+- **[옵시디언 공식 CLI 문서](https://help.obsidian.md/cli)** · **[옵시디언 커뮤니티](https://community.obsidian.md)** — 공식 CLI 문서와 플러그인·커뮤니티 탐색.
+- **[Markdown for agents](https://blog.cloudflare.com/markdown-for-agents)** — 마크다운 지식 저장소가 왜 AI에게 좋은 형식인지 설명하는 글.
+- **[Defuddle](https://defuddle.md)** — 웹 글을 정리해 클로드·옵시디언에 넣는 수집 흐름 예시.
