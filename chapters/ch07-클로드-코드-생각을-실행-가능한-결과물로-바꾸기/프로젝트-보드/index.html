@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  개인 프로젝트 추적 보드 — 『클로드 활용 입문서』 7장 예제 7.6 재현
+  - 카드 추가: 제목, 마감일, 메모, 우선순위
+  - 열: 할 일 / 진행 중 / 완료
+  - 드래그 앤 드롭으로 카드 이동
+  - 브라우저 로컬 저장소에 자동 저장 (인터넷 연결 없이 동작)
+  - 우선순위별 카드 테두리 색상 (긴급=레드, 보통=그린, 낮음=그레이) — 7.5.3절 후속 요청
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로젝트 추적 보드</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>프로젝트 추적 보드</h1>
+    <form id="addForm">
+      <input id="title" placeholder="할 일 제목" required>
+      <input id="due" type="date">
+      <input id="memo" placeholder="메모">
+      <select id="priority">
+        <option value="normal">보통</option>
+        <option value="urgent">긴급</option>
+        <option value="low">낮음</option>
+      </select>
+      <button type="submit">＋ 카드 추가</button>
+    </form>
+  </header>
+
+  <main class="board">
+    <section class="column" data-status="todo">
+      <h2>할 일</h2>
+      <div class="cards" data-status="todo"></div>
+    </section>
+    <section class="column" data-status="doing">
+      <h2>진행 중</h2>
+      <div class="cards" data-status="doing"></div>
+    </section>
+    <section class="column" data-status="done">
+      <h2>완료</h2>
+      <div class="cards" data-status="done"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

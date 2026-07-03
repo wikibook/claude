@@ -1,0 +1,39 @@
+/* 프로젝트 추적 보드 스타일 — 책 7장 예제 7.6 및 후속 요청 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: #f1f5f9; color: #0f172a; padding: 24px;
+}
+header h1 { font-size: 22px; margin-bottom: 14px; }
+#addForm { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+#addForm input, #addForm select {
+  padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px;
+}
+#addForm #title { flex: 1; min-width: 160px; }
+#addForm button {
+  border: 0; background: #2563eb; color: #fff; padding: 9px 16px;
+  border-radius: 8px; font-weight: 600; cursor: pointer;
+}
+.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 760px) { .board { grid-template-columns: 1fr; } }
+.column { background: #e2e8f0; border-radius: 14px; padding: 14px; min-height: 240px; }
+.column h2 { font-size: 15px; margin-bottom: 12px; color: #334155; }
+.cards { min-height: 160px; display: flex; flex-direction: column; gap: 10px; }
+.cards.dragover { outline: 2px dashed #2563eb; outline-offset: 2px; border-radius: 10px; }
+
+.card {
+  background: #fff; border-radius: 10px; padding: 12px 14px; cursor: grab;
+  box-shadow: 0 2px 6px rgba(15,23,42,.08); border-left: 5px solid #94a3b8;
+}
+.card.dragging { opacity: .5; }
+.card.urgent { border-left-color: #dc2626; }  /* 긴급 = 레드 */
+.card.normal { border-left-color: #16a34a; }  /* 보통 = 그린 */
+.card.low    { border-left-color: #94a3b8; }  /* 낮음 = 그레이 */
+.card h3 { font-size: 15px; margin-bottom: 4px; }
+.card .due { font-size: 12px; color: #2563eb; }
+.card .memo { font-size: 13px; color: #475569; margin-top: 6px; }
+.card .del {
+  float: right; border: 0; background: transparent; color: #94a3b8;
+  cursor: pointer; font-size: 14px;
+}
+.card .del:hover { color: #dc2626; }

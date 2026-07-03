@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+  뽀모도로 타이머 — 『클로드 활용 입문서』 3장 예제 3.4~3.5 재현
+  - 집중 25분 / 휴식 5분 기본, 시간 직접 수정 가능
+  - 시작 / 정지 / 리셋 버튼, 종료 시 비프음(Web Audio, 별도 파일 불필요)
+  - 다크 모드 배경: 집중=빨강 계열, 휴식=초록 계열로 전환
+  - 완료한 뽀모도로 횟수를 토마토(🍅)로 표시
+  인터넷 연결 없이 브라우저로 바로 열어 쓸 수 있습니다.
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>뽀모도로 타이머</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: #f8fafc; transition: background .6s ease; padding: 24px;
+    background: #1e293b; /* 기본 다크 */
+  }
+  body.focus { background: radial-gradient(circle at 50% 30%, #7f1d1d, #1a0a0a); }
+  body.break { background: radial-gradient(circle at 50% 30%, #14532d, #04140a); }
+  .wrap { text-align: center; width: 100%; max-width: 360px; }
+  .tomatoes { font-size: 22px; min-height: 30px; margin-bottom: 8px; letter-spacing: 2px; }
+  .mode { font-size: 15px; letter-spacing: 2px; opacity: .85; text-transform: uppercase; }
+  .time { font-size: 88px; font-weight: 700; font-variant-numeric: tabular-nums; margin: 6px 0 18px; }
+  .btns { display: flex; gap: 10px; justify-content: center; margin-bottom: 24px; }
+  button {
+    border: 0; border-radius: 12px; padding: 12px 22px; font-size: 16px; font-weight: 600;
+    cursor: pointer; background: rgba(255,255,255,.15); color: #fff; backdrop-filter: blur(4px);
+  }
+  button:hover { background: rgba(255,255,255,.28); }
+  button.primary { background: #fff; color: #0f172a; }
+  .settings { display: flex; gap: 14px; justify-content: center; font-size: 13px; opacity: .9; }
+  .settings label { display: flex; flex-direction: column; gap: 4px; }
+  .settings input {
+    width: 76px; padding: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3);
+    background: rgba(0,0,0,.2); color: #fff; text-align: center; font-size: 15px;
+  }
+</style>
+</head>
+<body class="focus">
+  <div class="wrap">
+    <div class="tomatoes" id="tomatoes"></div>
+    <div class="mode" id="mode">집중</div>
+    <div class="time" id="time">25:00</div>
+    <div class="btns">
+      <button class="primary" id="startStop">시작</button>
+      <button id="reset">리셋</button>
+    </div>
+    <div class="settings">
+      <label>집중(분)<input id="focusMin" type="number" min="1" value="25"></label>
+      <label>휴식(분)<input id="breakMin" type="number" min="1" value="5"></label>
+    </div>
+  </div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  let mode = 'focus';        // 'focus' | 'break'
+  let remaining = 25 * 60;   // 초
+  let timer = null;
+  let count = 0;             // 완료한 뽀모도로 수
+
+  function minutes(which) {
+    const v = parseInt($(which === 'focus' ? 'focusMin' : 'breakMin').value, 10);
+    return (isNaN(v) || v < 1) ? 1 : v;
+  }
+  function paint() {
+    const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+    const s = String(remaining % 60).padStart(2, '0');
+    $('time').textContent = `${m}:${s}`;
+    $('mode').textContent = mode === 'focus' ? '집중' : '휴식';
+    document.body.className = mode;
+    $('tomatoes').textContent = '🍅'.repeat(count);
+  }
+  function beep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator(), gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.frequency.value = 880; gain.gain.value = 0.2;
+      osc.start(); osc.stop(ctx.currentTime + 0.25);
+    } catch (e) { /* 자동재생 제한 시 무시 */ }
+  }
+  function switchMode() {
+    beep();
+    if (mode === 'focus') { count++; mode = 'break'; remaining = minutes('break') * 60; }
+    else { mode = 'focus'; remaining = minutes('focus') * 60; }
+    paint();
+  }
+  function tick() {
+    if (remaining > 0) { remaining--; paint(); }
+    else { switchMode(); }
+  }
+  function start() {
+    if (timer) return;
+    timer = setInterval(tick, 1000);
+    $('startStop').textContent = '정지';
+  }
+  function stop() {
+    clearInterval(timer); timer = null;
+    $('startStop').textContent = '시작';
+  }
+  $('startStop').addEventListener('click', () => timer ? stop() : start());
+  $('reset').addEventListener('click', () => {
+    stop(); mode = 'focus'; remaining = minutes('focus') * 60; paint();
+  });
+  $('focusMin').addEventListener('change', () => { if (!timer && mode === 'focus') { remaining = minutes('focus') * 60; paint(); } });
+  $('breakMin').addEventListener('change', () => { if (!timer && mode === 'break') { remaining = minutes('break') * 60; paint(); } });
+
+  paint();
+</script>
+</body>
+</html>
