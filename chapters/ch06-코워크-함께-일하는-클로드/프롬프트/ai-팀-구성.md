@@ -67,3 +67,7 @@
 
 - 설치: 클로드 코드에서 `/plugin install superpowers@claude-plugins-official`
 - 상세: [플러그인 목록의 Superpowers 절](../../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)
+
+같은 "역할 분담" 아이디어를 **슬래시 명령**으로 구현한 예시는 [garrytan/gstack](https://github.com/garrytan/gstack)입니다.
+`/office-hours`(기획), `/plan-eng-review`(아키텍처), `/qa`(테스트), `/ship`(릴리스)처럼 코워크 AI 팀과 대응되는 역할이 미리 정의되어 있습니다.
+- 상세: [플러그인 목록의 gstack 절](../../../plugins/README.md#gstack--가상-엔지니어링-팀)

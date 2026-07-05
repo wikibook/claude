@@ -23,6 +23,19 @@
 | 클로드 디자인 기능 | https://support.claude.com | 시각 자료 생성 관련 최신 기능을 확인할 수 있습니다. |
 | Claude Design 소개 | https://www.anthropic.com/news/claude-design-anthropic-labs | 클로드 디자인이 어떤 배경에서 나왔는지 설명한 앤트로픽 글입니다. |
 
+## gstack 디자인 명령 (클로드 코드)
+
+클로드 코드로 디자인까지 이어갈 때 [garrytan/gstack](https://github.com/garrytan/gstack)의 디자인 계열 명령을 참고할 수 있습니다.
+
+| 명령 | 용도 | 책 연결 |
+| --- | --- | --- |
+| `/design-consultation` | 디자인 시스템을 처음부터 구축 | 8.4절 브랜드·색상·타이포 설정 |
+| `/design-shotgun` | 여러 목업 변형을 비교·선택 | 8.3절 캠페인 시안 탐색 |
+| `/design-html` | 목업을 배포 가능한 HTML로 변환 | 8.3.1절 목업·랜딩 제작 |
+| `/plan-design-review` / `/design-review` | 계획·구현 단계 UI 품질 감사 | 8장 "사람이 최종 확인" 원칙 보완 |
+
+설치·전체 워크플로는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
+
 ## 추천 자료 — 디자인 도구
 
 함께 쓰면 좋은 도구입니다. 사용 전 각 사이트에서 최신 정보를 확인하세요.
@@ -40,3 +53,4 @@
 | Happy Hues | https://www.happyhues.co | 배색 참고용 색상 팔레트 큐레이션 사이트입니다. |
 | Developer Icons | https://github.com/xandemon/developer-icons | 개발자 아이콘 오픈소스 모음입니다. |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
+| garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |

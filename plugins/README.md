@@ -76,10 +76,60 @@
 > 책 4장(스킬), 6장(AI 팀·에이전트 협업), 7장(클로드 코드)과 연결해 보면 좋습니다.
 > Cursor·Codex·Pi 등 다른 코딩 에이전트용 설치법은 [저장소 README](https://github.com/obra/superpowers#installation)를 참고하세요.
 
+## gstack — 가상 엔지니어링 팀
+
+[garrytan/gstack](https://github.com/garrytan/gstack)는 YC CEO Garry Tan이 실제로 쓰는 **클로드 코드 슬래시 명령 묶음**입니다.
+CEO·엔지니어·디자이너·QA·릴리스 엔지니어처럼 역할이 나뉜 23개 전문가 명령과 8개 보조 도구로, 빈 프롬프트 대신 **스프린트 순서**를 따르게 합니다.
+
+### 설치 (클로드 코드)
+
+요구 사항: 클로드 코드, Git, [Bun](https://bun.sh/) v1.0+
+
+```
+git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup
+```
+
+설치 후 `CLAUDE.md`에 gstack 스킬 목록을 넣으면 세션마다 `/browse`, `/review`, `/ship` 등을 바로 쓸 수 있습니다.
+팀 저장소에 공유하려면 `./setup --team`과 `gstack-team-init`으로 동료 환경을 맞출 수 있습니다 — [README 설치 절](https://github.com/garrytan/gstack#install--30-seconds) 참고.
+
+### 스프린트 흐름
+
+**Think → Plan → Build → Review → Test → Ship → Reflect**
+
+| 단계 | 대표 명령 | 역할 |
+| --- | --- | --- |
+| Think | `/office-hours` | 제품 아이디어를 6가지 질문으로 재정의, 설계 문서 작성 |
+| Plan | `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/autoplan` | CEO·엔지니어·디자이너 관점 계획 검토 |
+| Build | (일반 구현) | 승인된 계획대로 코드 작성 |
+| Review | `/review`, `/investigate`, `/cso` | 코드 리뷰·근본 원인 디버깅·보안(OWASP+STRIDE) |
+| Test | `/qa`, `/design-review`, `/devex-review` | 실제 브라우저 QA, UI·개발자 경험 감사 |
+| Ship | `/ship`, `/land-and-deploy`, `/canary` | 테스트·PR·배포·프로덕션 확인 |
+| Reflect | `/retro`, `/learn` | 주간 회고, 세션 간 학습 축적 |
+
+### 빠른 체험 (5단계)
+
+1. `/office-hours` — 무엇을 만들지 설명
+2. `/plan-ceo-review` — 범위·전략 검토
+3. `/review` — 변경분 코드 리뷰
+4. `/qa https://스테이징-URL` — 브라우저로 동작 확인
+5. `/ship` — 테스트 후 PR 생성
+
+### Superpowers와 함께 쓰기
+
+| | Superpowers | gstack |
+| --- | --- | --- |
+| 초점 | TDD·서브에이전트·스킬 자동 적용 | 역할별 슬래시 명령·제품→배포 스프린트 |
+| 설치 | 공식 마켓플레이스 플러그인 | `~/.claude/skills/gstack`에 클론 |
+| 책 연결 | 4·6·7장 방법론 | 6장 AI 팀, 7장 클로드 코드, 8장 디자인 검토 |
+
+> 디자인 관련: `/design-consultation`, `/design-shotgun`, `/design-html`, `/design-review`는 8장과 연결해 보면 좋습니다.
+> Cursor·Codex 등 다른 에이전트는 `./setup --host <이름>`으로 설치합니다.
+
 ## 관련 저장소
 
 | 저장소 | URL | 설명 |
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | Superpowers 플러그인 소스·스킬 라이브러리·개발 방법론 |
+| garrytan/gstack | https://github.com/garrytan/gstack | Garry Tan의 클로드 코드 슬래시 명령·가상 엔지니어링 팀 |
 | anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 생산성, 영업, 마케팅, 데이터 작업용 플러그인 예시를 확인할 수 있습니다. |
 | openai/codex-plugin-cc | https://github.com/openai/codex-plugin-cc | 클로드 코드 플러그인 생태계와 호환되는 외부 플러그인 예시입니다. |

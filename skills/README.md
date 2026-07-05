@@ -62,6 +62,7 @@
 | Leonxlnx/taste-skill | https://github.com/Leonxlnx/taste-skill | 이미지와 디자인 감각을 보강하는 스킬입니다. |
 | Notion Skills for Claude | https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0 | 노션이 공식 제공하는 클로드 스킬 모음입니다. |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills` 스킬로 작성·테스트 방법을 배우고, 협업·TDD·디버깅 스킬을 참고할 수 있습니다. |
+| garrytan/gstack | https://github.com/garrytan/gstack | 슬래시 명령 형태의 역할별 스킬(CEO·QA·디자인·릴리스). `~/.claude/skills/gstack` 설치 |
 
 ## Superpowers 스킬 라이브러리
 
@@ -75,3 +76,17 @@
 | 품질 | `test-driven-development`, `systematic-debugging`, `verification-before-completion` |
 
 설치와 전체 워크플로는 [플러그인 목록](../plugins/README.md#superpowers--에이전트-스킬-프레임워크)을 참고하세요.
+
+## gstack — 역할별 슬래시 명령
+
+[garrytan/gstack](https://github.com/garrytan/gstack)은 스킬을 **슬래시 명령**으로 묶어 가상 팀 역할을 부여합니다.
+4장에서 배운 `SKILL.md` 구조가 실전에서 어떻게 확장되는지 비교해 볼 수 있습니다.
+
+| 분류 | 대표 명령 |
+| --- | --- |
+| 기획 | `/office-hours`, `/plan-ceo-review`, `/autoplan` |
+| 품질 | `/review`, `/qa`, `/cso` |
+| 디자인 | `/design-consultation`, `/design-shotgun`, `/design-html` |
+| 배포 | `/ship`, `/land-and-deploy`, `/document-release` |
+
+설치·스프린트 흐름은 [플러그인 목록의 gstack 절](../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.

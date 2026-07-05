@@ -41,6 +41,7 @@
 | anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 업무 특화 플러그인 |
 | wshobson/agents | https://github.com/wshobson/agents | AI 팀·에이전트 구성 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `subagent-driven-development`·`dispatching-parallel-agents` 등 AI 팀 분업 패턴 |
+| garrytan/gstack | https://github.com/garrytan/gstack | CEO·디자이너·QA·릴리스 역할 슬래시 명령 — 6.3.6절 AI 팀의 클로드 코드 버전 |
 | claude.com/download | https://claude.com/download | 클로드 데스크톱·코워크 설치 |
 
 ## 실전 활용 사례 — 앤트로픽 디자인 리드 Jenny Wen의 코워크 활용법

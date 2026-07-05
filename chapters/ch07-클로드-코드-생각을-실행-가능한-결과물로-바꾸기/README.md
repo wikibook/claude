@@ -50,11 +50,26 @@
 
 상세 스킬 목록·다른 에이전트(Cursor, Codex 등) 설치법은 [플러그인 목록의 Superpowers 절](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)에서 정리했습니다.
 
+## gstack — 역할별 슬래시 명령 팀
+
+[garrytan/gstack](https://github.com/garrytan/gstack)는 클로드 코드에 **가상 엔지니어링 팀**을 붙이는 오픈소스 도구입니다.
+`/office-hours`로 제품을 정리하고, `/plan-ceo-review`·`/plan-eng-review`로 계획을 검토한 뒤,
+`/review`·`/qa`·`/ship`으로 리뷰·테스트·PR까지 이어갑니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 설치 | `git clone` → `~/.claude/skills/gstack` → `./setup` |
+| 책과의 연결 | 7.3절 `CLAUDE.md`·루틴 ↔ gstack 스킬 목록 등록, 7.5절 장시간 작업 ↔ `/autoplan`·`/ship` 파이프라인 |
+| Superpowers와의 차이 | Superpowers는 TDD·서브에이전트 **방법론**, gstack은 CEO·QA·릴리스 **역할 명령** — 함께 써도 됩니다 |
+
+상세 명령 목록·팀 모드 설치는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
+
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | 설계·계획·TDD·서브에이전트 개발 방법론과 스킬 라이브러리 |
+| garrytan/gstack | https://github.com/garrytan/gstack | `/office-hours`→`/review`→`/qa`→`/ship` 역할별 슬래시 명령 스프린트 |
 | anthropics/claude-code | https://github.com/anthropics/claude-code | 클로드 코드 공식 오픈소스 저장소입니다. |
 | anthropics/claude-code-action | https://github.com/anthropics/claude-code-action | PR과 Issue에서 클로드가 자동으로 코드를 리뷰하는 GitHub Action입니다. |
 | anthropics/anthropic-cookbook | https://github.com/anthropics/anthropic-cookbook | 클로드 API 실용 예제를 Jupyter Notebook 형태로 제공합니다. |
