@@ -40,13 +40,33 @@ vault-template/
 ## 시작하기 — 수집 흐름
 
 1. 새 자료를 마크다운으로 `sources/`에 넣습니다.
-   - **옵시디언 웹 클리퍼**([obsidian.md/clipper](https://obsidian.md/clipper)) — 저장 위치를 `sources/`로 맞추면 브라우저에서 바로 수집할 수 있습니다. 본문 추출 엔진으로 [Defuddle](https://defuddle.md/)이 쓰입니다.
-   - **Defuddle API** — URL만으로 마크다운+YAML frontmatter를 받을 때: `curl defuddle.md/도메인/경로` (예: `curl defuddle.md/stephango.com`). 스크립트·클로드 코드로 `sources/`에 일괄 저장할 때 유용합니다.
+   - **옵시디언 웹 클리퍼** — 브라우저에서 페이지·하이라이트를 한 번에 보관함에 저장합니다. [한국어 소개·설치](https://obsidian.md/ko/clipper)
+   - **Defuddle API** — URL만으로 마크다운+YAML frontmatter를 받을 때: `curl defuddle.md/도메인/경로`. 스크립트·클로드 코드로 `sources/`에 일괄 저장할 때 유용합니다.
    - **북마클릿** — [defuddle.md](https://defuddle.md/)에서 드래그해 북마크바에 두면, 열린 페이지를 한 번에 마크다운으로 변환할 수 있습니다.
 2. 터미널에서 볼트 폴더로 이동해 `claude`를 실행하고, 수집·정리를 요청합니다(책 예제 9.4).
 3. 주기적으로 "점검(lint)"을 요청해 모순·고아 페이지·중복을 정리합니다.
 
 > Defuddle은 광고·사이드바·댓글을 제거하고 **본문만** 남깁니다. `sources/`는 원본 보관용이므로, 위키로 옮길 때는 책 9.3.3절 규칙대로 출처를 함께 기록하세요.
+
+## 옵시디언 웹 클리퍼 설정 (9.4절 `sources/` 연동)
+
+[Obsidian Web Clipper](https://obsidian.md/ko/clipper)는 무료·[오픈소스](https://github.com/obsidianmd/obsidian-clipper) 브라우저 확장입니다. Chrome·Safari·Firefox·Edge 등에서 설치할 수 있습니다.
+
+| 기능 | 설명 | 볼트 연결 |
+| --- | --- | --- |
+| **클립** | 페이지 본문·메타데이터를 마크다운 파일로 저장 | `Note location` → `sources/articles/` 등 |
+| **하이라이트** | 중요 구절만 선택해 클립. 재방문 시에도 표시 유지 | `sources/highlights/` 또는 주제별 하위 폴더 |
+| **템플릿** | 기사·논문·레시피 등 유형별 frontmatter 자동 적용 | `{{title}}`, `{{author}}`, `{{published}}`, `source` 속성 |
+| **규칙** | 도메인별 템플릿 자동 선택 | 자주 보는 사이트마다 `sources/` 하위 경로 지정 |
+
+책 볼트 템플릿과 맞추려면 클리퍼 설정에서 다음을 권장합니다.
+
+1. **Vault** — `vault-template/`을 복사한 볼트 선택
+2. **Note location** — `sources/articles` (또는 `sources/highlights`)
+3. **Note name** — `{{date}}-{{title}}`처럼 날짜·제목이 파일명에 들어가게 설정
+4. **Properties** — `source`(원문 URL), `author`, `published`가 frontmatter에 들어가게 유지 → 9.4절 수집·위키 반영에 유리
+
+본문 추출에는 [Defuddle](https://defuddle.md/)이 사용됩니다. 템플릿 변수·고급 설정은 [웹 클리퍼 도움말](https://obsidian.md/ko/help/web-clipper)을 참고하세요.
 
 ## 추천 자료
 
@@ -57,8 +77,10 @@ vault-template/
 | 옵시디언 공식 사이트 | https://obsidian.md | 옵시디언의 기본 기능과 플러그인을 확인할 수 있습니다. |
 | 옵시디언 커뮤니티 | https://community.obsidian.md | 커뮤니티가 만든 플러그인과 테마를 한곳에서 검색하고 둘러볼 수 있습니다. |
 | 옵시디언 플러그인 마켓 | https://obsidian.md/plugins | 공식 커뮤니티 플러그인을 검색하고 설치할 수 있습니다. |
-| 옵시디언 웹 클리퍼 | https://obsidian.md/clipper | 웹 페이지를 옵시디언 노트로 바로 저장하는 브라우저 확장입니다. |
-| Defuddle | https://defuddle.md/ | 웹 페이지 본문을 마크다운으로 추출. 웹 클리퍼 엔진·API·CLI([kepano/defuddle](https://github.com/kepano/defuddle)) |
+| 옵시디언 웹 클리퍼 | https://obsidian.md/ko/clipper | 브라우저에서 페이지·하이라이트 클립. 템플릿·`sources/` 경로 설정 |
+| 웹 클리퍼 도움말 | https://obsidian.md/ko/help/web-clipper | 템플릿 변수·규칙·페이지 데이터 조작 |
+| obsidianmd/obsidian-clipper | https://github.com/obsidianmd/obsidian-clipper | 웹 클리퍼 오픈소스 저장소 |
+| Defuddle | https://defuddle.md/ | 웹 페이지 본문 추출 엔진·API·CLI([kepano/defuddle](https://github.com/kepano/defuddle)) |
 
 ### 함께 쓰면 좋은 플러그인 후보
 
