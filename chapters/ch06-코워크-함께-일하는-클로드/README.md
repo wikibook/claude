@@ -40,7 +40,7 @@
 | anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 책 6.2절 코워크 업무 플러그인(Marketing, Sales 등) |
 | anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 업무 특화 플러그인 |
 | wshobson/agents | https://github.com/wshobson/agents | AI 팀·에이전트 구성 참고 |
-| obra/superpowers | https://github.com/obra/superpowers | 에이전트 워크플로우·스킬 패턴 |
+| obra/superpowers | https://github.com/obra/superpowers | `subagent-driven-development`·`dispatching-parallel-agents` 등 AI 팀 분업 패턴 |
 | claude.com/download | https://claude.com/download | 클로드 데스크톱·코워크 설치 |
 
 ## 실전 활용 사례 — 앤트로픽 디자인 리드 Jenny Wen의 코워크 활용법

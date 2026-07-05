@@ -58,3 +58,12 @@
 품질 기준: 구체적인 수치와 출처를 우선합니다.
 불확실한 정보는 "확인 필요"로 표시하고 단언하지 않습니다.
 ```
+
+## 참고: 클로드 코드에서의 서브에이전트 방법론
+
+6.3.6절의 역할 분담·품질 검토 흐름은 클로드 코드 쪽에서 [obra/superpowers](https://github.com/obra/superpowers)로도 구현되어 있습니다.
+`subagent-driven-development` 스킬은 작업마다 새 서브에이전트를 띄우고, 스펙 준수·코드 품질을 2단계로 검토합니다.
+`dispatching-parallel-agents`는 서로 독립한 작업을 병렬로 나눌 때 씁니다.
+
+- 설치: 클로드 코드에서 `/plugin install superpowers@claude-plugins-official`
+- 상세: [플러그인 목록의 Superpowers 절](../../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)

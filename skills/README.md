@@ -61,3 +61,17 @@
 | kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 스킬 예시입니다. |
 | Leonxlnx/taste-skill | https://github.com/Leonxlnx/taste-skill | 이미지와 디자인 감각을 보강하는 스킬입니다. |
 | Notion Skills for Claude | https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0 | 노션이 공식 제공하는 클로드 스킬 모음입니다. |
+| obra/superpowers | https://github.com/obra/superpowers | `writing-skills` 스킬로 작성·테스트 방법을 배우고, 협업·TDD·디버깅 스킬을 참고할 수 있습니다. |
+
+## Superpowers 스킬 라이브러리
+
+[obra/superpowers](https://github.com/obra/superpowers)는 클로드 코드 공식 플러그인이면서, 스킬 소스가 공개된 커뮤니티 방법론입니다.
+`skills/` 폴더의 `SKILL.md`를 열어 4장에서 배운 YAML 머리말·본문 구조가 실전 워크플로에 어떻게 쓰이는지 비교해 보세요.
+
+| 분류 | 대표 스킬 |
+| --- | --- |
+| 메타 | `writing-skills`, `using-superpowers` |
+| 협업 | `brainstorming`, `writing-plans`, `subagent-driven-development` |
+| 품질 | `test-driven-development`, `systematic-debugging`, `verification-before-completion` |
+
+설치와 전체 워크플로는 [플러그인 목록](../plugins/README.md#superpowers--에이전트-스킬-프레임워크)을 참고하세요.

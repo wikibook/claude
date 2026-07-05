@@ -49,7 +49,18 @@
 | agentskills.io | https://agentskills.io | Agent Skills를 탐색하고 공유하는 공식 사이트입니다. |
 | awesome-claude-skills (큐레이션) | https://github.com/travisvn/awesome-claude-skills | 분야별로 검증된 커뮤니티 스킬을 모아둔 목록입니다. |
 | knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 생산성·세일즈·마케팅·법률·재무 등 업무 영역별 플러그인 묶음입니다(설치는 6장). |
-| obra/superpowers | https://github.com/obra/superpowers | skill-creator·에이전트 워크플로 참고 |
+| obra/superpowers | https://github.com/obra/superpowers | `writing-skills`로 스킬 작성법 학습, `brainstorming`·`test-driven-development` 등 실전 워크플로 스킬 참고 |
+
+### Superpowers 스킬이 책 개념과 맞닿는 지점
+
+| Superpowers 스킬 | 책에서 배운 것 |
+| --- | --- |
+| `writing-skills` | 4.3절 skill-creator·`SKILL.md` 작성 |
+| `brainstorming` | 2장 맥락·형식·역할을 정리하는 프롬프트 기법 |
+| `using-superpowers` | 4.1절 "작업 전에 관련 스킬을 먼저 확인"하는 에이전트 동작 |
+
+스킬 원문은 [GitHub `skills/` 폴더](https://github.com/obra/superpowers/tree/main/skills)에서 열어볼 수 있습니다.
+클로드 코드에 플러그인으로 설치하면 세션마다 자동 적용됩니다 — [설치법](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크).
 
 > **확인 습관** — 커뮤니티 스킬은 설치 전에 `SKILL.md`를 열어 어떤 동작을 지시하는지 직접 읽어보세요.
 > 최근 업데이트(6개월 이내), 설명 문서(README)의 충실함도 함께 확인하면 좋습니다(책 4.2.2절).

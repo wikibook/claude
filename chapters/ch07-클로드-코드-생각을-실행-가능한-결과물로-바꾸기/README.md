@@ -35,10 +35,26 @@
 | Claude Code Routines | https://code.claude.com/docs/en/routines | 반복 작업을 루틴으로 저장하고 다시 실행하는 방법을 안내합니다. |
 | Claude Code Best Practices | https://code.claude.com/docs/en/best-practices | 클로드 코드 활용법을 정리한 공식 가이드입니다. |
 
+## Superpowers — 체계적인 개발 워크플로
+
+책 7장은 "말로 일을 시키고 결과를 확인한다"는 흐름을 다룹니다.
+한 단계 더 나아가 **설계 → 계획 → 서브에이전트 실행 → 테스트 → 리뷰**까지 자동으로 이어지게 하려면
+[obra/superpowers](https://github.com/obra/superpowers)를 참고하세요.
+
+| 항목 | 내용 |
+| --- | --- |
+| 정의 | 조합 가능한 스킬 + 초기 지침으로 구성된 **에이전트 개발 방법론** |
+| 설치 | 클로드 코드에서 `/plugin install superpowers@claude-plugins-official` |
+| 핵심 철학 | 테스트 우선(TDD), 체계적 디버깅, 단순성, "완료" 선언 전 검증 |
+| 책과의 연결 | 7.3절 `CLAUDE.md`·루틴(반복 절차) ↔ 스킬로 고정된 워크플로, 7.5절 장시간 작업 ↔ 서브에이전트 분업 |
+
+상세 스킬 목록·다른 에이전트(Cursor, Codex 등) 설치법은 [플러그인 목록의 Superpowers 절](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)에서 정리했습니다.
+
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
+| obra/superpowers | https://github.com/obra/superpowers | 설계·계획·TDD·서브에이전트 개발 방법론과 스킬 라이브러리 |
 | anthropics/claude-code | https://github.com/anthropics/claude-code | 클로드 코드 공식 오픈소스 저장소입니다. |
 | anthropics/claude-code-action | https://github.com/anthropics/claude-code-action | PR과 Issue에서 클로드가 자동으로 코드를 리뷰하는 GitHub Action입니다. |
 | anthropics/anthropic-cookbook | https://github.com/anthropics/anthropic-cookbook | 클로드 API 실용 예제를 Jupyter Notebook 형태로 제공합니다. |
