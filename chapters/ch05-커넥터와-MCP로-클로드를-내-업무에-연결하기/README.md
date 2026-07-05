@@ -55,7 +55,6 @@
 | --- | --- | --- |
 | github/github-mcp-server | https://github.com/github/github-mcp-server | GitHub 공식 MCP 서버입니다. |
 | microsoft/mcp-for-beginners | https://github.com/microsoft/mcp-for-beginners | MCP 입문용 오픈소스 커리큘럼입니다(6개 언어 지원). |
-| punkpeye/awesome-mcp-servers | https://github.com/punkpeye/awesome-mcp-servers | 대규모 MCP 서버 큐레이션 목록입니다. |
 | Glama MCP Registry | https://glama.ai/mcp/servers | 다양한 MCP 서버를 검색할 수 있는 디렉터리입니다. |
 | Smithery | https://smithery.ai | MCP 서버를 검색하고 설치할 수 있는 플랫폼입니다. |
 | block/goose | https://github.com/block/goose | MCP를 지원하는 오픈소스 AI 에이전트입니다. |

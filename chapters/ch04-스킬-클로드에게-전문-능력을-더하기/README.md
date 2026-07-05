@@ -33,7 +33,7 @@ npx skills add anthropics/skills --skill skill-creator
 npx skills add anthropics/skills --list    # 목록만 보기
 ```
 
-스펙·검증은 [agentskills.io](https://agentskills.io), **찾기·설치**는 skills.sh, 전체 목록·설치 예시는 [스킬 카탈로그](../../skills/README.md#skills-directory--skillssh)를 참고하세요.
+스펙·검증은 [agentskills.io](https://agentskills.io), **찾기·설치**는 skills.sh, 전체 목록·설치 예시는 [스킬 카탈로그](../../catalog/스킬.md#skills-directory--skillssh)를 참고하세요.
 
 > 4.2.2절 확인 습관: 리더보드에서 고른 스킬도 설치 전 `SKILL.md`를 열어 동작·권한을 읽어보세요.
 
@@ -77,8 +77,7 @@ npx skills add anthropics/skills --list    # 목록만 보기
 | --- | --- | --- |
 | skills.sh | https://www.skills.sh/ | Agent Skills 디렉터리·리더보드. `npx skills add` 설치 |
 | agentskills.io | https://agentskills.io | Agent Skills 스펙·탐색 공식 사이트 |
-| awesome-claude-skills (큐레이션) | https://github.com/travisvn/awesome-claude-skills | 분야별로 검증된 커뮤니티 스킬을 모아둔 목록입니다. |
-| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../plugins/README.md) |
+| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../catalog/플러그인.md) |
 | claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 `SKILL.md`·플레이북 `CLAUDE.md`·cold-start interview 패턴 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills`로 스킬 작성법 학습, `brainstorming`·`test-driven-development` 등 실전 워크플로 스킬 참고 |
 | mattpocock/skills | https://github.com/mattpocock/skills | `writing-great-skills` 스킬 작성 참고. 7장 `/grill-with-docs`·`/tdd`와 연결 |
@@ -113,7 +112,7 @@ npx skills add mattpocock/skills --skill writing-great-skills setup-matt-pocock-
 | `using-superpowers` | 4.1절 "작업 전에 관련 스킬을 먼저 확인"하는 에이전트 동작 |
 
 스킬 원문은 [GitHub `skills/` 폴더](https://github.com/obra/superpowers/tree/main/skills)에서 열어볼 수 있습니다.
-클로드 코드에 플러그인으로 설치하면 세션마다 자동 적용됩니다 — [설치법](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크).
+클로드 코드에 플러그인으로 설치하면 세션마다 자동 적용됩니다 — [설치법](../../catalog/플러그인.md#superpowers--에이전트-스킬-프레임워크).
 
 > **확인 습관** — 커뮤니티 스킬은 설치 전에 `SKILL.md`를 열어 어떤 동작을 지시하는지 직접 읽어보세요.
 > 최근 업데이트(6개월 이내), 설명 문서(README)의 충실함도 함께 확인하면 좋습니다(책 4.2.2절).
@@ -122,4 +121,4 @@ npx skills add mattpocock/skills --skill writing-great-skills setup-matt-pocock-
 
 > 이 장에서 소개한 기능과 연결된 저장소 내 자료입니다.
 
-- [스킬 카탈로그](../../skills/README.md) — 공식·커뮤니티 스킬 전체 목록과 설치법
+- [스킬 카탈로그](../../catalog/스킬.md) — 공식·커뮤니티 스킬 전체 목록과 설치법

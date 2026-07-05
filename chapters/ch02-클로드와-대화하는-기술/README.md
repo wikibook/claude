@@ -25,8 +25,6 @@
 | anthropics/prompt-eng-interactive-tutorial | https://github.com/anthropics/prompt-eng-interactive-tutorial | 프롬프트 엔지니어링 대화형 튜토리얼 |
 | dair-ai/Prompt-Engineering-Guide | https://github.com/dair-ai/Prompt-Engineering-Guide | LLM 공통 프롬프트 가이드 |
 | anthropics/courses | https://github.com/anthropics/courses | API·프롬프트 엔지니어링 강의 자료 |
-| f/awesome-chatgpt-prompts | https://github.com/f/awesome-chatgpt-prompts | 역할·Few-shot 참고 예시 모음 |
-| langgptai/awesome-claude-prompts | https://github.com/langgptai/awesome-claude-prompts | 클로드용 프롬프트 예시 |
 
 ## 공식 문서
 

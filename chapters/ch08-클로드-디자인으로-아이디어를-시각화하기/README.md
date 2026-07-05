@@ -110,7 +110,7 @@ python3 .claude/skills/ui-ux-pro-max/scripts/search.py "SaaS dashboard" --design
 | `/design-html` | 목업을 배포 가능한 HTML로 변환 | 8.3.1절 목업·랜딩 제작 |
 | `/plan-design-review` / `/design-review` | 계획·구현 단계 UI 품질 감사 | 8장 "사람이 최종 확인" 원칙 보완 |
 
-설치·전체 워크플로는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
+설치·전체 워크플로는 [플러그인 목록의 gstack 절](../../catalog/플러그인.md#gstack--가상-엔지니어링-팀)을 참고하세요.
 
 ## Frontend Slides — HTML 발표 자료 만들기
 

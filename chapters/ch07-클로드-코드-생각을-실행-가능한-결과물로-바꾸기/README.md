@@ -60,7 +60,7 @@
 | 핵심 철학 | 테스트 우선(TDD), 체계적 디버깅, 단순성, "완료" 선언 전 검증 |
 | 책과의 연결 | 7.3절 `CLAUDE.md`·루틴(반복 절차) ↔ 스킬로 고정된 워크플로, 7.5절 장시간 작업 ↔ 서브에이전트 분업 |
 
-상세 스킬 목록·다른 에이전트(Cursor, Codex 등) 설치법은 [플러그인 목록의 Superpowers 절](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)에서 정리했습니다.
+상세 스킬 목록·다른 에이전트(Cursor, Codex 등) 설치법은 [플러그인 목록의 Superpowers 절](../../catalog/플러그인.md#superpowers--에이전트-스킬-프레임워크)에서 정리했습니다.
 
 ## Matt Pocock Skills — 실전 엔지니어링 워크플로
 
@@ -110,7 +110,7 @@ npx skills add mattpocock/skills
 | 책과의 연결 | 7.3절 `CLAUDE.md`·루틴 ↔ gstack 스킬 목록 등록, 7.5절 장시간 작업 ↔ `/autoplan`·`/ship` 파이프라인 |
 | Superpowers와의 차이 | Superpowers는 TDD·서브에이전트 **방법론**, gstack은 CEO·QA·릴리스 **역할 명령** — 함께 써도 됩니다 |
 
-상세 명령 목록·팀 모드 설치는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
+상세 명령 목록·팀 모드 설치는 [플러그인 목록의 gstack 절](../../catalog/플러그인.md#gstack--가상-엔지니어링-팀)을 참고하세요.
 
 ## Claude SEO — 사이트·랜딩 SEO 감사
 
