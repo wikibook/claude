@@ -48,7 +48,8 @@
 | --- | --- | --- |
 | agentskills.io | https://agentskills.io | Agent Skills를 탐색하고 공유하는 공식 사이트입니다. |
 | awesome-claude-skills (큐레이션) | https://github.com/travisvn/awesome-claude-skills | 분야별로 검증된 커뮤니티 스킬을 모아둔 목록입니다. |
-| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 생산성·세일즈·마케팅·법률·재무 등 업무 영역별 플러그인 묶음입니다(설치는 6장). |
+| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../plugins/README.md) |
+| claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 `SKILL.md`·플레이북 `CLAUDE.md`·cold-start interview 패턴 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills`로 스킬 작성법 학습, `brainstorming`·`test-driven-development` 등 실전 워크플로 스킬 참고 |
 
 ### Superpowers 스킬이 책 개념과 맞닿는 지점

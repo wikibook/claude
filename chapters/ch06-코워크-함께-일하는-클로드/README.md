@@ -33,12 +33,27 @@
 | 클로드 지원 센터 | https://support.claude.com | 코워크와 클로드 기능 업데이트를 확인하는 출발점입니다. |
 | 클로드 코드 문서 | https://docs.anthropic.com/en/docs/claude-code | 클로드 코드와 플러그인 활용 맥락을 함께 확인할 수 있습니다. |
 
+## 앤트로픽 공식 업무 플러그인
+
+책 6.2절 플러그인 생태계는 아래 세 마켓플레이스로 구체화할 수 있습니다. 설치·명령·커넥터 상세는 [플러그인 목록](../../plugins/README.md)을 참고하세요.
+
+| 저장소 | 대상 | 책 연결 |
+| --- | --- | --- |
+| [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | 마케팅·영업·법무·재무·PM 등 **일반 지식 업무** 11종 | 6.2.1절 Marketing, 6.2절 표 6.2 |
+| [financial-services](https://github.com/anthropics/financial-services) | IB·리서치·PE·자산관리 **금융 워크플로** | 6.3절 파일 분석·보고서 초안 |
+| [claude-for-legal](https://github.com/anthropics/claude-for-legal) | 계약·프라이버시·소송 등 **법무 연습 영역** | 6.2절 Legal, 6.3절 문서 검토 |
+
+클로드 코드에서도 같은 마켓플레이스를 `claude plugin marketplace add`로 등록해 쓸 수 있습니다.
+개발용 공식 플러그인(Superpowers, GitHub 등)은 [claude-plugins-official](https://github.com/anthropics/claude-plugins-official)에서 `/plugin install …@claude-plugins-official`로 설치합니다.
+
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
 | anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 책 6.2절 코워크 업무 플러그인(Marketing, Sales 등) |
-| anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 업무 특화 플러그인 |
+| anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 모델·피치·실적 리뷰 에이전트·`/comps`·`/dcf` |
+| anthropics/claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 플러그인·cold-start interview·변호사 검토용 초안 |
+| anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | 클로드 코드 공식 플러그인 마켓플레이스 |
 | wshobson/agents | https://github.com/wshobson/agents | AI 팀·에이전트 구성 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `subagent-driven-development`·`dispatching-parallel-agents` 등 AI 팀 분업 패턴 |
 | garrytan/gstack | https://github.com/garrytan/gstack | CEO·디자이너·QA·릴리스 역할 슬래시 명령 — 6.3.6절 AI 팀의 클로드 코드 버전 |

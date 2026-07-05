@@ -70,6 +70,7 @@
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | 설계·계획·TDD·서브에이전트 개발 방법론과 스킬 라이브러리 |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/office-hours`→`/review`→`/qa`→`/ship` 역할별 슬래시 명령 스프린트 |
+| anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | `/plugin install …@claude-plugins-official` 공식 마켓플레이스 |
 | anthropics/claude-code | https://github.com/anthropics/claude-code | 클로드 코드 공식 오픈소스 저장소입니다. |
 | anthropics/claude-code-action | https://github.com/anthropics/claude-code-action | PR과 Issue에서 클로드가 자동으로 코드를 리뷰하는 GitHub Action입니다. |
 | anthropics/anthropic-cookbook | https://github.com/anthropics/anthropic-cookbook | 클로드 API 실용 예제를 Jupyter Notebook 형태로 제공합니다. |

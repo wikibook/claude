@@ -3,22 +3,116 @@
 > 책 6장과 연결되는 보충 자료입니다.
 > **코워크 업무 플러그인**(Marketing, Sales 등)과 **클로드 코드 플러그인**은 설치 위치와 용도가 다릅니다.
 
-## 코워크 업무 플러그인 (책 6.2절)
+## 코워크·업무 플러그인 (책 6.2절)
 
-책 표 6.2의 Marketing, Sales, Legal 등은 아래 저장소에서 확인합니다.
-코워크 대화창 **+ → 플러그인** 메뉴에서 설치합니다.
+책 표 6.2의 Marketing, Sales, Legal 등은 앤트로픽이 공개한 **역할별 플러그인 마켓플레이스**에서 설치합니다.
+각 플러그인은 스킬(자동 적용)·슬래시 명령(직접 호출)·MCP 커넥터(외부 도구)로 구성됩니다.
 
-| 저장소 | URL | 설명 |
+| 설치 위치 | 방법 |
+| --- | --- |
+| **코워크** | [claude.com/plugins](https://claude.com/plugins/)에서 설치, 또는 저장소 URL 붙여넣기 |
+| **클로드 코드** | `claude plugin marketplace add <저장소>` 후 `claude plugin install <이름>@<마켓>` |
+
+> 설치 전 플러그인이 접근하는 MCP 서버·파일·권한을 확인하세요. 조직 계정은 보안 정책을 먼저 점검합니다.
+
+### knowledge-work-plugins — 일반 지식 업무
+
+[anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)는 코워크를 **직무 전문가**로 바꾸는 11개 플러그인 묶음입니다.
+
+| 플러그인 | 하는 일 | 대표 커넥터 |
 | --- | --- | --- |
-| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 마케팅·영업·법무·재무·HR 등 업무 플러그인 |
-| financial-services | https://github.com/anthropics/financial-services | 금융 업무 특화 플러그인 |
+| `marketing` | 콘텐츠·캠페인·브랜드 보이스·성과 리포트 | Slack, Canva, Figma, HubSpot, Ahrefs |
+| `sales` | 리드 리서치·콜 준비·파이프라인·아웃리치 | HubSpot, Clay, ZoomInfo, Fireflies |
+| `legal` | 계약 검토·NDA 분류·컴플라이언스·리스크 | Slack, Box, Egnyte, Microsoft 365 |
+| `finance` | 분개·대사·재무제표·결산·감사 지원 | Snowflake, Databricks, BigQuery |
+| `product-management` | 스펙·로드맵·리서치 합성·경쟁 분석 | Linear, Jira, Figma, Amplitude |
+| `customer-support` | 티켓 분류·응답 초안·에스컬레이션·KB 작성 | Intercom, HubSpot, Guru |
+| `data` | SQL·통계·대시보드·검증 | Snowflake, Databricks, Hex |
+| `productivity` | 일정·태스크·개인 맥락 관리 | Notion, Asana, Linear, Microsoft 365 |
+| `enterprise-search` | 이메일·채팅·문서 통합 검색 | Slack, Notion, Guru, Microsoft 365 |
+| `bio-research` | 문헌·유전체·타깃 우선순위 등 R&D | PubMed, Benchling, Open Targets |
+| `cowork-plugin-management` | 팀 맞춤 플러그인 제작·커스터마이즈 | — |
+
+```bash
+claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin install marketing@knowledge-work-plugins
+```
+
+책 6.2.1절 예제 6.2(`/campaign-plan`)는 `marketing` 플러그인과 연결됩니다.
+회사 용어·도구에 맞게 `.mcp.json`과 스킬 파일을 수정하면 팀 전용 플러그인이 됩니다.
+
+### financial-services — 금융 서비스
+
+[anthropics/financial-services](https://github.com/anthropics/financial-services)는 IB·주식 리서치·PE·자산관리·펀드 어드민 워크플로용 에이전트와 스킬입니다.
+
+| 유형 | 예시 | 대표 명령 |
+| --- | --- | --- |
+| **에이전트** | Pitch Agent, Market Researcher, GL Reconciler, Earnings Reviewer | 워크플로 전체 자동화 |
+| **버티컬 스킬** | investment-banking, equity-research, private-equity, wealth-management | `/comps`, `/dcf`, `/earnings`, `/ic-memo` |
+| **MCP 커넥터** | FactSet, S&P Global, PitchBook, LSEG, Morningstar 등 11개 | `financial-analysis` 코어 플러그인에 집중 |
+
+```bash
+claude plugin marketplace add anthropics/financial-services
+claude plugin install financial-analysis@claude-for-financial-services
+claude plugin install pitch-agent@claude-for-financial-services
+```
+
+코워크에서는 **Settings → Plugins → Add plugin**에 저장소 URL(`https://github.com/anthropics/financial-services`)을 붙여 설치합니다.
+
+> **주의**: 투자·법률·세무 조언이 아닙니다. 모델·메모·대사 등 **초안**을 만들고 반드시 전문가가 검토·승인해야 합니다.
+
+### claude-for-legal — 법무
+
+[anthropics/claude-for-legal](https://github.com/anthropics/claude-for-legal)은 인하우스·로펌·로스쿨 실무용 **연습 영역별** 플러그인입니다.
+
+| 플러그인 | 하는 일 | 대표 에이전트·명령 |
+| --- | --- | --- |
+| `commercial-legal` | 벤더 MSA·NDA·갱신·에스컬레이션 | Vendor Agreement Reviewer, `/commercial-legal:review` |
+| `privacy-legal` | DPA·DSAR·PIA·규정 갭 분석 | DSAR Responder, `/privacy-legal:dsar-response` |
+| `corporate-legal` | 실사·마감 체크리스트·이사회 동의 | Tabular Diligence Review |
+| `employment-legal` | 채용·해고·분류·조사 | Termination Reviewer |
+| `litigation-legal` | 소송 포트폴리오·제출·증거·브리프 | Claim Chart Builder, Docket Watcher |
+| `product-legal` | 출시 검토·마케팅 클레임 | Launch Reviewer |
+| `regulatory-legal` | 규제 피드·정책 diff·갭 추적 | Reg Feed Watcher |
+| `ai-governance-legal` | AI 사용 사례·벤더 AI 약관 | AI Use Case Triager |
+| `ip-legal` | 상표·FTO·DMCA·OSS | Trademark Clearance Screener |
+| `legal-clinic` / `law-student` | 클리닉·바 준비·IRAC 연습 | Clinic Intake, Socratic Drill |
+
+```bash
+/plugin marketplace add <이 저장소 경로 또는 GitHub URL>
+/plugin install commercial-legal@claude-for-legal
+/commercial-legal:cold-start-interview   # 반드시 먼저 — 팀 플레이북을 CLAUDE.md에 기록
+```
+
+**cold-start interview**를 건너뛰면 일반적인 출력만 나옵니다. 서명된 MSA·플레이북 등 시드 문서를 준비하면 품질이 올라갑니다.
+
+> **주의**: 모든 출력은 **변호사 검토용 초안**입니다. 법률 자문·결론을 대체하지 않습니다.
 
 ## 클로드 코드 플러그인 — 설치 기본 흐름
 
-클로드 코드에서 플러그인 페이지를 열고 안내에 따라 `/install` 명령을 실행합니다.
+클로드 코드에서 `/plugin` 또는 `/plugin > Discover`로 마켓플레이스를 열고 설치합니다.
 조직 계정이나 회사 장비에서는 설치 전 권한과 보안 정책을 확인하세요.
 
-## 클로드 코드 공식 플러그인
+## 클로드 코드 공식 마켓플레이스
+
+[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)은 클로드 코드용 **큐레이션 플러그인 디렉터리**입니다.
+
+| 구분 | 내용 |
+| --- | --- |
+| `/plugins` | 앤트로픽 내부 플러그인 (Superpowers, GitHub, Playwright 등) |
+| `/external_plugins` | 파트너·커뮤니티 제출 플러그인 |
+| 설치 | `/plugin install {이름}@claude-plugins-official` 또는 Discover에서 탐색 |
+| 구조 | `plugin.json` + 선택적 `commands/`, `agents/`, `skills/`, `.mcp.json` |
+
+```bash
+/plugin install superpowers@claude-plugins-official
+/plugin install github@claude-plugins-official
+```
+
+플러그인을 직접 만들 때는 [공식 문서](https://code.claude.com/docs/en/plugins)와 저장소의 `plugins/example-plugin` 예시를 참고하세요.
+설치 전 각 플러그인 README에서 MCP·파일 접근 범위를 확인하세요.
+
+## 클로드 코드 공식 플러그인 (마켓플레이스 요약)
 
 | 플러그인 | URL | 설명 |
 | --- | --- | --- |
@@ -131,5 +225,8 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | Superpowers 플러그인 소스·스킬 라이브러리·개발 방법론 |
 | garrytan/gstack | https://github.com/garrytan/gstack | Garry Tan의 클로드 코드 슬래시 명령·가상 엔지니어링 팀 |
-| anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 생산성, 영업, 마케팅, 데이터 작업용 플러그인 예시를 확인할 수 있습니다. |
+| anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | 클로드 코드 공식 플러그인 마켓플레이스 소스 |
+| anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 마케팅·영업·법무·재무 등 11개 지식 업무 플러그인 |
+| anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 에이전트·모델링 스킬·데이터 MCP |
+| anthropics/claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 연습 영역별 에이전트·스킬·MCP |
 | openai/codex-plugin-cc | https://github.com/openai/codex-plugin-cc | 클로드 코드 플러그인 생태계와 호환되는 외부 플러그인 예시입니다. |

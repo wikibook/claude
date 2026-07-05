@@ -58,3 +58,15 @@
 | lastmile-ai/mcp-agent | https://github.com/lastmile-ai/mcp-agent | MCP 기반 에이전트 워크플로우 프레임워크입니다. |
 | microsoft/markitdown | https://github.com/microsoft/markitdown | PDF·Office 문서를 마크다운으로 변환(드라이브 문서 분석 맥락) |
 | googleworkspace/cli | https://github.com/googleworkspace/cli | Google Workspace CLI |
+
+## 업무 플러그인에 포함된 MCP 예시
+
+5.3절 MCP는 플러그인 안의 `.mcp.json`으로도 연결됩니다. 업계별 공식 플러그인이 어떤 도구를 묶는지 참고하세요.
+
+| 저장소 | MCP 예시 | 연결 장면 |
+| --- | --- | --- |
+| [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Slack, HubSpot, Snowflake, Box, Figma | 마케팅·영업·재무·법무 일반 업무 |
+| [financial-services](https://github.com/anthropics/financial-services) | FactSet, S&P Global, PitchBook, LSEG, Morningstar | 금융 데이터·리서치·모델링 |
+| [claude-for-legal](https://github.com/anthropics/claude-for-legal) | Ironclad, DocuSign, iManage, CourtListener | 계약·실사·소송 리서치 |
+
+> 구독·API 키가 필요한 MCP는 제공자 약관과 회사 보안 정책을 확인한 뒤 연결하세요.
