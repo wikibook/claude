@@ -55,6 +55,18 @@
 클로드 코드에서도 같은 마켓플레이스를 `claude plugin marketplace add`로 등록해 쓸 수 있습니다.
 개발용 공식 플러그인(Superpowers, GitHub 등)은 [claude-plugins-official](https://github.com/anthropics/claude-plugins-official)에서 `/plugin install …@claude-plugins-official`로 설치합니다.
 
+## Claude SEO — 캠페인 랜딩·사이트 출시 후 점검
+
+코워크 `marketing` 플러그인(예제 6.2 `/campaign-plan`)으로 **캠페인 브리프·콘텐츠**를 만든 뒤, 랜딩·사이트를 배포했다면 [Claude SEO](https://github.com/AgriciDaniel/claude-seo)로 **기술 SEO**를 점검할 수 있습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | `/seo audit` 전체 감사, `/seo page` 단일 페이지, `/seo schema` 구조화 데이터, `/seo geo` AI 검색 최적화 |
+| 책 연결 | 6.2.1절 캠페인 → 8.6절 랜딩 제작 → **출시 후** `/seo audit` |
+| 설치 | `/plugin marketplace add AgriciDaniel/claude-seo` → `/plugin install claude-seo@agricidaniel-claude-seo` |
+
+상세 명령·Google API 연동은 [7장 README의 Claude SEO 절](../ch07-클로드-코드-생각을-실행-가능한-결과물로-바꾸기/README.md#claude-seo--사이트랜딩-seo-감사)을 참고하세요.
+
 ## 추천 자료
 
 | 자료 | URL | 설명 |
@@ -66,6 +78,7 @@
 | wshobson/agents | https://github.com/wshobson/agents | AI 팀·에이전트 구성 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `subagent-driven-development`·`dispatching-parallel-agents` 등 AI 팀 분업 패턴 |
 | garrytan/gstack | https://github.com/garrytan/gstack | CEO·디자이너·QA·릴리스 역할 슬래시 명령 — 6.3.6절 AI 팀의 클로드 코드 버전 |
+| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | 캠페인 랜딩·사이트 `/seo audit` — marketing 플러그인과 출시 후 짝 |
 | claude.com/download | https://claude.com/download | 클로드 데스크톱·코워크 설치 |
 
 ## 실전 활용 사례 — 앤트로픽 디자인 리드 Jenny Wen의 코워크 활용법

@@ -75,12 +75,50 @@
 
 상세 명령 목록·팀 모드 설치는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
 
+## Claude SEO — 사이트·랜딩 SEO 감사
+
+[AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo)는 클로드 코드용 **SEO 분석 플러그인**입니다.
+25개 서브스킬·최대 15개 전문 에이전트가 병렬로 기술 SEO, E-E-A-T, Schema.org, AI 검색(GEO), 로컬·이커머스 SEO를 점검하고 **우선순위 액션 플랜**을 만듭니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | `/seo audit`, `/seo page`, `/seo schema`, `/seo geo`, `/seo content-brief` 등 25개 명령 |
+| 출력 | 마크다운 리포트·PDF·JSON. 기본적으로 **로컬**에서 처리(데이터가 벤더로 올라가지 않음) |
+| Google 연동 | API 키만으로 PageSpeed·CrUX; Search Console·GA4는 선택 설정(`/seo google setup`) |
+| 책 연결 | 7.4절 포트폴리오·배포 사이트 점검, 8.6절 캠페인 랜딩 출시 후 SEO, 6.2절 마케팅 랜딩 |
+
+### 코워크 `marketing` vs Claude SEO
+
+| | knowledge-work-plugins `marketing` | Claude SEO |
+| --- | --- | --- |
+| 초점 | 캠페인 브리프·콘텐츠·Ahrefs 등 **기획·작성** | 배포된 URL의 **기술·스키마·CWV·GEO 감사** |
+| 책 연결 | 6.2.1절 `/campaign-plan` | 7·8장 HTML·랜딩 **출시 후** 점검 |
+
+### 설치 (클로드 코드)
+
+```
+/plugin marketplace add AgriciDaniel/claude-seo
+/plugin install claude-seo@agricidaniel-claude-seo
+```
+
+수동 설치: `git clone` 후 `install.sh` 실행 — [README](https://github.com/AgriciDaniel/claude-seo#installation) 참고.
+
+```
+/seo audit https://example.com
+/seo page https://example.com/about
+/seo schema https://example.com
+/seo content-brief "데일리핏 100일 루틴"
+```
+
+> Codex를 쓰면 동일 워크플로의 [codex-seo](https://github.com/AgriciDaniel/codex-seo) 포트를 참고하세요. 각 권고에는 "어떻게 실패했는지 확인할까?" 검증 항목이 붙어 있어, 책 7장 **사람이 결과를 확인**하는 원칙과 잘 맞습니다.
+
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | 설계·계획·TDD·서브에이전트 개발 방법론과 스킬 라이브러리 |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/office-hours`→`/review`→`/qa`→`/ship` 역할별 슬래시 명령 스프린트 |
+| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | `/seo audit`·schema·GEO 등 25개 SEO 명령. 병렬 감사·로컬 리포트 |
 | anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | `/plugin install …@claude-plugins-official` 공식 마켓플레이스 |
 | anthropics/claude-code | https://github.com/anthropics/claude-code | 클로드 코드 공식 오픈소스 저장소입니다. |
 | anthropics/claude-code-action | https://github.com/anthropics/claude-code-action | PR과 Issue에서 클로드가 자동으로 코드를 리뷰하는 GitHub Action입니다. |

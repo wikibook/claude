@@ -159,6 +159,23 @@ PPT 변환은 `scripts/extract-pptx.py`로 본문·이미지·노트를 추출�
 
 > Cursor·Codex 등 다른 에이전트는 저장소 링크와 `SKILL.md`를 넘기면 같은 흐름을 따를 수 있습니다.
 
+## Claude SEO — 랜딩·홈페이지 출시 후 점검
+
+8.3.1절 목업·8.6절 캠페인 랜딩을 HTML로 배포한 뒤, 검색·AI 인용에 맞는지 점검하려면 [Claude SEO](https://github.com/AgriciDaniel/claude-seo)를 쓸 수 있습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | `/seo page` 단일 랜딩 분석, `/seo schema` JSON-LD 검증·생성, `/seo geo` AI 검색(GEO) 준비도 |
+| 책 연결 | 예제 8.1 홈페이지, 8.6 랜딩 — gstack `/design-html`·Frontend Slides **이후** 출시 단계 |
+| 설치 | `/plugin marketplace add AgriciDaniel/claude-seo` → `/plugin install claude-seo@agricidaniel-claude-seo` |
+
+```
+/seo page https://example.com/dailyfit
+/seo schema https://example.com/dailyfit
+```
+
+설치·전체 명령·Google Search Console 연동은 [7장 README](../ch07-클로드-코드-생각을-실행-가능한-결과물로-바꾸기/README.md#claude-seo--사이트랜딩-seo-감사)를 참고하세요.
+
 ## 추천 자료 — 디자인 도구
 
 함께 쓰면 좋은 도구입니다. 사용 전 각 사이트에서 최신 정보를 확인하세요.
@@ -180,5 +197,6 @@ PPT 변환은 `scripts/extract-pptx.py`로 본문·이미지·노트를 추출�
 | UI UX Pro Max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙·디자인 시스템 자동 생성. `uipro init --ai claude` |
 | uupm.cc | https://uupm.cc | UI UX Pro Max 공식 사이트·Premium 안내 |
 | Frontend Slides | https://github.com/zarazhangrui/frontend-slides | HTML 웹 슬라이드·PPT 변환 스킬. `/frontend-slides:frontend-slides` |
+| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | 랜딩·홈페이지 `/seo page`·schema·GEO 감사 |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |

@@ -220,6 +220,7 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 > UI 품질·AI slop 제거: [Impeccable](https://impeccable.style/) (`/plugin marketplace add pbakaus/impeccable`) — 8장 README 참고.
 > 디자인 시스템 초안·업종별 스타일: [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (`/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill`) — 8장 README 참고.
 > HTML 발표 슬라이드·PPT 변환: [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) (`/plugin marketplace add https://github.com/zarazhangrui/frontend-slides`) — 8장 README 참고.
+> 사이트·랜딩 SEO 감사: [Claude SEO](https://github.com/AgriciDaniel/claude-seo) (`/plugin marketplace add AgriciDaniel/claude-seo`) — 6·7·8장 README 참고.
 > Cursor·Codex 등 다른 에이전트는 `./setup --host <이름>`으로 설치합니다.
 
 ## 관련 저장소
@@ -233,3 +234,4 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 | anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 에이전트·모델링 스킬·데이터 MCP |
 | anthropics/claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 연습 영역별 에이전트·스킬·MCP |
 | openai/codex-plugin-cc | https://github.com/openai/codex-plugin-cc | 클로드 코드 플러그인 생태계와 호환되는 외부 플러그인 예시입니다. |
+| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | `/seo audit`·schema·GEO 등 SEO 분석 플러그인 (MIT) |
