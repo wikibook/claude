@@ -217,6 +217,7 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 | 책 연결 | 4·6·7장 방법론 | 6장 AI 팀, 7장 클로드 코드, 8장 디자인 검토 |
 
 > 디자인 관련: `/design-consultation`, `/design-shotgun`, `/design-html`, `/design-review`는 8장과 연결해 보면 좋습니다.
+> UI 품질·AI slop 제거: [Impeccable](https://impeccable.style/) (`/plugin marketplace add pbakaus/impeccable`) — 8장 README 참고.
 > Cursor·Codex 등 다른 에이전트는 `./setup --host <이름>`으로 설치합니다.
 
 ## 관련 저장소

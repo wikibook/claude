@@ -52,5 +52,7 @@
 | 3D SVG Tool | https://3dsvg.design | 3D SVG를 생성하는 웹 도구입니다. |
 | Happy Hues | https://www.happyhues.co | 배색 참고용 색상 팔레트 큐레이션 사이트입니다. |
 | Developer Icons | https://github.com/xandemon/developer-icons | 개발자 아이콘 오픈소스 모음입니다. |
+| Impeccable | https://impeccable.style/ | 디자인 명령 23종·`DESIGN.md`·AI slop 탐지. 클로드 코드·Cursor 등 |
+| pbakaus/impeccable | https://github.com/pbakaus/impeccable | Impeccable 스킬·CLI 소스 (`npx impeccable install`) |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |
