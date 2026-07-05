@@ -27,6 +27,17 @@
 > 클로드 코드가 작업을 마치면 결과 파일을 열어 의도대로인지 직접 확인하세요.
 > 코드를 몰라도 결과물 검증은 사람이 해야 합니다(책 7.4.3절).
 
+## 공식 강의
+
+| 강의 | URL | 설명 |
+| --- | --- | --- |
+| Claude Code 101 | https://anthropic.skilljar.com/claude-code-101 | 개발 일상에 클로드 코드를 끼워 넣는 기본 워크플로 |
+| Claude Code in Action | https://anthropic.skilljar.com/claude-code-in-action | 팀 개발 흐름에 클로드 코드 통합 |
+| Introduction to subagents | https://anthropic.skilljar.com/introduction-to-subagents | 서브에이전트로 맥락 분리·작업 위임 |
+| Anthropic Courses | https://anthropic.skilljar.com/ | 전체 강의 목록 — [시작하기](../../resources/시작하기.md#공식-강의-anthropic-academy) |
+
+> 책 7.2절 설치·첫 작업(예제 7.1) 후 **Claude Code 101**을 병행하면 터미널·세션 개념이 빨리 잡힙니다. 장시간 작업(7.5절)은 **subagents** 강의와 [Superpowers](#superpowers--체계적인-개발-워크플로)를 함께 보면 좋습니다.
+
 ## 공식 문서
 
 | 문서 | URL | 설명 |

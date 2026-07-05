@@ -17,6 +17,15 @@
 > 책 본문은 skill-creator가 스킬 파일을 자동으로 만들어 주므로 `SKILL.md` 원문을 싣지 않습니다.
 > 여기 파일은 책에서 설명한 동작과 출력 형식에 맞춰 같은 결과가 나오도록 재현한 것입니다.
 
+## 공식 강의
+
+| 강의 | URL | 설명 |
+| --- | --- | --- |
+| Introduction to agent skills | https://anthropic.skilljar.com/introduction-to-agent-skills | 첫 스킬 만들기부터 팀 배포·문제 해결까지 (클로드 코드) |
+| Anthropic Courses | https://anthropic.skilljar.com/ | 전체 강의 목록 — [시작하기](../../resources/시작하기.md#공식-강의-anthropic-academy)에서 장별 링크 모음 |
+
+> 책 4.3절에서 `skill-creator`로 스킬을 만든 뒤, 위 강의로 **배포·팀 공유·트러블슈팅** 흐름을 보완해 보세요.
+
 ## 공식 문서
 
 | 문서 | URL | 설명 |

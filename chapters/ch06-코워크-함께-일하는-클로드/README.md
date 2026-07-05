@@ -26,6 +26,15 @@
 > 플러그인은 클로드의 행동 범위와 연결 도구를 넓힙니다.
 > 설치 전에는 어떤 권한과 데이터를 다루는지 먼저 확인하세요.
 
+## 공식 강의
+
+| 강의 | URL | 설명 |
+| --- | --- | --- |
+| Introduction to Claude Cowork | https://anthropic.skilljar.com/introduction-to-claude-cowork | 실제 파일·프로젝트와 함께 코워크 태스크 루프·플러그인·스킬 실습 |
+| Anthropic Courses | https://anthropic.skilljar.com/ | 전체 강의 목록 |
+
+> 책 6.1.5절 첫 실습(폴더 정리)을 마친 뒤 위 강의로 **다단계 작업을 책임 있게 맡기는** 흐름을 익히면 좋습니다.
+
 ## 공식 문서
 
 | 문서 | URL | 설명 |

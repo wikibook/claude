@@ -19,6 +19,8 @@
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
+| Claude 101 | https://anthropic.skilljar.com/claude-101 | 앤트로픽 공식 입문 강의 — 핵심 기능·일상 업무 활용 |
+| AI Fluency: Framework & Foundations | https://anthropic.skilljar.com/ai-fluency-framework-foundations | AI와 효과적·윤리적으로 협업하는 기초 |
 | anthropics/prompt-eng-interactive-tutorial | https://github.com/anthropics/prompt-eng-interactive-tutorial | 프롬프트 엔지니어링 대화형 튜토리얼 |
 | dair-ai/Prompt-Engineering-Guide | https://github.com/dair-ai/Prompt-Engineering-Guide | LLM 공통 프롬프트 가이드 |
 | anthropics/courses | https://github.com/anthropics/courses | API·프롬프트 엔지니어링 강의 자료 |

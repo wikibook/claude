@@ -26,7 +26,11 @@
 | --- | --- | --- |
 | MCP 서버란 무엇인가 | https://support.claude.com/en/articles/8364676-what-are-mcp-servers | MCP 서버의 개념과 클로드에서의 사용법을 설명합니다. |
 | 원격 MCP 커넥터 시작하기 | https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp | MCP 서버와 클로드 커넥터 연결 방식을 단계별로 안내합니다. |
-| MCP 입문 강의 | https://anthropic.skilljar.com/introduction-to-model-context-protocol | MCP 개념을 강의 형식으로 따라가며 익힐 수 있습니다. |
+| Anthropic Courses | https://anthropic.skilljar.com/ | 앤트로픽 공식 강의 포털 — MCP·API·클로드 코드 등 |
+| MCP 입문 강의 | https://anthropic.skilljar.com/introduction-to-model-context-protocol | Python으로 MCP 서버·클라이언트를 만드는 입문 강의 |
+| MCP 고급 강의 | https://anthropic.skilljar.com/model-context-protocol-advanced-topics | 샘플링·알림·프로덕션 MCP 구현 패턴 |
+| Claude Platform 101 | https://anthropic.skilljar.com/claude-platform-101 | Claude Developer Platform 입문 |
+| Building with the Claude API | https://anthropic.skilljar.com/claude-with-the-anthropic-api | Claude API 전반 실습 |
 | MCP 공식 사이트 | https://modelcontextprotocol.io | Model Context Protocol 전체 문서와 스펙을 제공합니다. |
 | MCP 공식 레지스트리 | https://registry.modelcontextprotocol.io | 공식 MCP 서버 레지스트리입니다. |
 | 클로드 API 문서 | https://docs.anthropic.com | 개발자용 API 레퍼런스와 통합 가이드입니다. |

@@ -15,11 +15,13 @@
 | [프롬프트 템플릿 모음](../../resources/프롬프트-템플릿.md) | 예제 1.1~1.2 첫 대화 프롬프트 | 1.4절 |
 | [용어집](../../resources/용어집.md) | 클로드, 모델, 프로젝트 등 반복 용어 | 1장 전체 |
 | [공식 문서 링크](../../resources/공식문서-링크.md) | 책 전반에서 쓰는 공식 문서 모음 | 1장 이후 |
+| [시작하기 — 공식 강의](../../resources/시작하기.md#공식-강의-anthropic-academy) | Anthropic Academy(Skilljar) 따라하기 강의 | 1.2절 이후 |
 
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
+| Anthropic Courses | https://anthropic.skilljar.com/ | 공식 강의 포털 — [Claude 101](https://anthropic.skilljar.com/claude-101), [AI Fluency](https://anthropic.skilljar.com/ai-fluency-framework-foundations) |
 | anthropics/model-spec | https://github.com/anthropics/model-spec | 클로드 모델 행동·안전 스펙 |
 | Claude's Constitution | https://www.anthropic.com/constitution | 클로드 응답 원칙 |
 | 앤트로픽 연구 | https://www.anthropic.com/research | 안전성·모델 연구 |
