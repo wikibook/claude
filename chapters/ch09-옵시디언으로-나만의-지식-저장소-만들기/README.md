@@ -40,9 +40,13 @@ vault-template/
 ## 시작하기 — 수집 흐름
 
 1. 새 자료를 마크다운으로 `sources/`에 넣습니다.
-   옵시디언 웹 클리퍼([obsidian.md/clipper](https://obsidian.md/clipper))로 저장 위치를 `sources/`로 맞추면 편합니다.
+   - **옵시디언 웹 클리퍼**([obsidian.md/clipper](https://obsidian.md/clipper)) — 저장 위치를 `sources/`로 맞추면 브라우저에서 바로 수집할 수 있습니다. 본문 추출 엔진으로 [Defuddle](https://defuddle.md/)이 쓰입니다.
+   - **Defuddle API** — URL만으로 마크다운+YAML frontmatter를 받을 때: `curl defuddle.md/도메인/경로` (예: `curl defuddle.md/stephango.com`). 스크립트·클로드 코드로 `sources/`에 일괄 저장할 때 유용합니다.
+   - **북마클릿** — [defuddle.md](https://defuddle.md/)에서 드래그해 북마크바에 두면, 열린 페이지를 한 번에 마크다운으로 변환할 수 있습니다.
 2. 터미널에서 볼트 폴더로 이동해 `claude`를 실행하고, 수집·정리를 요청합니다(책 예제 9.4).
 3. 주기적으로 "점검(lint)"을 요청해 모순·고아 페이지·중복을 정리합니다.
+
+> Defuddle은 광고·사이드바·댓글을 제거하고 **본문만** 남깁니다. `sources/`는 원본 보관용이므로, 위키로 옮길 때는 책 9.3.3절 규칙대로 출처를 함께 기록하세요.
 
 ## 추천 자료
 
@@ -54,6 +58,7 @@ vault-template/
 | 옵시디언 커뮤니티 | https://community.obsidian.md | 커뮤니티가 만든 플러그인과 테마를 한곳에서 검색하고 둘러볼 수 있습니다. |
 | 옵시디언 플러그인 마켓 | https://obsidian.md/plugins | 공식 커뮤니티 플러그인을 검색하고 설치할 수 있습니다. |
 | 옵시디언 웹 클리퍼 | https://obsidian.md/clipper | 웹 페이지를 옵시디언 노트로 바로 저장하는 브라우저 확장입니다. |
+| Defuddle | https://defuddle.md/ | 웹 페이지 본문을 마크다운으로 추출. 웹 클리퍼 엔진·API·CLI([kepano/defuddle](https://github.com/kepano/defuddle)) |
 
 ### 함께 쓰면 좋은 플러그인 후보
 
@@ -74,4 +79,5 @@ Smart Connections는 볼트가 커진 뒤 효과가 큽니다. 책에서 만든 
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
-| kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 클로드 스킬 예시입니다. (kepano = Minimal 테마 제작자) |
+| kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 클로드 스킬 예시입니다. (kepano = Minimal 테마·Defuddle 제작자) |
+| kepano/defuddle | https://github.com/kepano/defuddle | 웹→마크다운 추출 라이브러리. `npx defuddle parse <URL> --markdown` |

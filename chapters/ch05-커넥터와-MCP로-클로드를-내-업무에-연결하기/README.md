@@ -57,6 +57,7 @@
 | block/goose | https://github.com/block/goose | MCP를 지원하는 오픈소스 AI 에이전트입니다. |
 | lastmile-ai/mcp-agent | https://github.com/lastmile-ai/mcp-agent | MCP 기반 에이전트 워크플로우 프레임워크입니다. |
 | microsoft/markitdown | https://github.com/microsoft/markitdown | PDF·Office 문서를 마크다운으로 변환(드라이브 문서 분석 맥락) |
+| Defuddle | https://defuddle.md/ | **웹 페이지** 본문→마크다운(`curl defuddle.md/URL`, CLI). markitdown과 보완 관계 | 9장 |
 | googleworkspace/cli | https://github.com/googleworkspace/cli | Google Workspace CLI |
 
 ## 업무 플러그인에 포함된 MCP 예시

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <!--
-  뽀모도로 타이머 — 『클로드 활용 입문서』 3장 예제 3.4~3.5 재현
+  포모도로 타이머 — 『클로드 활용 입문서』 3장 예제 3.4~3.5 재현
   - 집중 25분 / 휴식 5분 기본, 시간 직접 수정 가능
   - 시작 / 정지 / 리셋 버튼, 종료 시 비프음(Web Audio, 별도 파일 불필요)
   - 다크 모드 배경: 집중=빨강 계열, 휴식=초록 계열로 전환
-  - 완료한 뽀모도로 횟수를 토마토(🍅)로 표시
+  - 완료한 포모도로 횟수를 토마토(🍅)로 표시
   인터넷 연결 없이 브라우저로 바로 열어 쓸 수 있습니다.
 -->
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뽀모도로 타이머</title>
+<title>포모도로 타이머</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -61,7 +61,7 @@
   let mode = 'focus';        // 'focus' | 'break'
   let remaining = 25 * 60;   // 초
   let timer = null;
-  let count = 0;             // 완료한 뽀모도로 수
+  let count = 0;             // 완료한 포모도로 수
 
   function minutes(which) {
     const v = parseInt($(which === 'focus' ? 'focusMin' : 'breakMin').value, 10);
