@@ -41,6 +41,8 @@ claude plugin install marketing@knowledge-work-plugins
 책 6.2.1절 예제 6.2(`/campaign-plan`)는 `marketing` 플러그인과 연결됩니다.
 회사 용어·도구에 맞게 `.mcp.json`과 스킬 파일을 수정하면 팀 전용 플러그인이 됩니다.
 
+> 카피·CRO·런칭 스킬 보강: [Marketing Skills](https://github.com/coreyhaines31/marketingskills) (`npx skills add coreyhaines31/marketingskills` 또는 `/plugin marketplace add coreyhaines31/marketingskills`) — 6장 README 참고.
+
 ### financial-services — 금융 서비스
 
 [anthropics/financial-services](https://github.com/anthropics/financial-services)는 IB·주식 리서치·PE·자산관리·펀드 어드민 워크플로용 에이전트와 스킬입니다.
@@ -220,6 +222,7 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 > UI 품질·AI slop 제거: [Impeccable](https://impeccable.style/) (`/plugin marketplace add pbakaus/impeccable`) — 8장 README 참고.
 > 디자인 시스템 초안·업종별 스타일: [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (`/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill`) — 8장 README 참고.
 > HTML 발표 슬라이드·PPT 변환: [Frontend Slides](https://github.com/zarazhangrui/frontend-slides) (`/plugin marketplace add https://github.com/zarazhangrui/frontend-slides`) — 8장 README 참고.
+> 마케팅 카피·CRO·런칭: [Marketing Skills](https://github.com/coreyhaines31/marketingskills) — 6·8장 README 참고.
 > 사이트·랜딩 SEO 감사: [Claude SEO](https://github.com/AgriciDaniel/claude-seo) (`/plugin marketplace add AgriciDaniel/claude-seo`) — 6·7·8장 README 참고.
 > Cursor·Codex 등 다른 에이전트는 `./setup --host <이름>`으로 설치합니다.
 
@@ -234,4 +237,5 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 | anthropics/financial-services | https://github.com/anthropics/financial-services | 금융 에이전트·모델링 스킬·데이터 MCP |
 | anthropics/claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 연습 영역별 에이전트·스킬·MCP |
 | openai/codex-plugin-cc | https://github.com/openai/codex-plugin-cc | 클로드 코드 플러그인 생태계와 호환되는 외부 플러그인 예시입니다. |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 마케팅 스킬 40+ — copywriting, CRO, launch, SEO (MIT) |
 | AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | `/seo audit`·schema·GEO 등 SEO 분석 플러그인 (MIT) |

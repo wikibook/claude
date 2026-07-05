@@ -62,6 +62,7 @@
 | Leonxlnx/taste-skill | https://github.com/Leonxlnx/taste-skill | 이미지와 디자인 감각을 보강하는 스킬입니다. |
 | nextlevelbuilder/ui-ux-pro-max-skill | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙으로 디자인 시스템 자동 생성. `uipro init --ai claude` |
 | zarazhangrui/frontend-slides | https://github.com/zarazhangrui/frontend-slides | HTML 웹 슬라이드·PPT 변환. 스타일 프리뷰 선택 후 단일 HTML 출력 |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 마케팅 스킬 40+. `product-marketing` 맥락 → copywriting·cro·launch·seo-audit |
 | AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | SEO 분석 플러그인. `/seo audit`·schema·GEO·25개 서브스킬 |
 | Notion Skills for Claude | https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0 | 노션이 공식 제공하는 클로드 스킬 모음입니다. |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills` 스킬로 작성·테스트 방법을 배우고, 협업·TDD·디버깅 스킬을 참고할 수 있습니다. |

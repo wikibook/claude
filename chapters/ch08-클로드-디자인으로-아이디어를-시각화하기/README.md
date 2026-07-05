@@ -159,9 +159,21 @@ PPT 변환은 `scripts/extract-pptx.py`로 본문·이미지·노트를 추출�
 
 > Cursor·Codex 등 다른 에이전트는 저장소 링크와 `SKILL.md`를 넘기면 같은 흐름을 따를 수 있습니다.
 
+## Marketing Skills — 랜딩 카피·전환 최적화
+
+8.3절 캠페인 시안의 **문구·전환**을 다듬을 때 [Marketing Skills](https://github.com/coreyhaines31/marketingskills)를 쓸 수 있습니다.
+
+| 스킬 | 용도 | 책 연결 |
+| --- | --- | --- |
+| `copywriting` | 홈페이지·랜딩 헤드라인·본문 | 예제 8.1·8.6 |
+| `cro` | 랜딩·폼 전환율 개선 | 8.6절 CTA·스크롤 구간 |
+| `launch` | 캠페인 출시·공지 전략 | 8.3절 데일리핏 캠페인 |
+
+설치·`product-marketing` 맥락 파일은 [6장 README](../ch06-코워크-함께-일하는-클로드/README.md#marketing-skills--마케팅-스킬-라이브러리)를 참고하세요.
+
 ## Claude SEO — 랜딩·홈페이지 출시 후 점검
 
-8.3.1절 목업·8.6절 캠페인 랜딩을 HTML로 배포한 뒤, 검색·AI 인용에 맞는지 점검하려면 [Claude SEO](https://github.com/AgriciDaniel/claude-seo)를 쓸 수 있습니다.
+Marketing Skills로 **카피·CRO**를 맞춘 뒤 HTML로 배포했다면, 검색·AI 인용에 맞는지 [Claude SEO](https://github.com/AgriciDaniel/claude-seo)로 점검할 수 있습니다.
 
 | 항목 | 내용 |
 | --- | --- |
@@ -197,6 +209,7 @@ PPT 변환은 `scripts/extract-pptx.py`로 본문·이미지·노트를 추출�
 | UI UX Pro Max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙·디자인 시스템 자동 생성. `uipro init --ai claude` |
 | uupm.cc | https://uupm.cc | UI UX Pro Max 공식 사이트·Premium 안내 |
 | Frontend Slides | https://github.com/zarazhangrui/frontend-slides | HTML 웹 슬라이드·PPT 변환 스킬. `/frontend-slides:frontend-slides` |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 랜딩 `copywriting`·`cro`·`launch` |
 | AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | 랜딩·홈페이지 `/seo page`·schema·GEO 감사 |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |

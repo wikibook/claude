@@ -55,9 +55,53 @@
 클로드 코드에서도 같은 마켓플레이스를 `claude plugin marketplace add`로 등록해 쓸 수 있습니다.
 개발용 공식 플러그인(Superpowers, GitHub 등)은 [claude-plugins-official](https://github.com/anthropics/claude-plugins-official)에서 `/plugin install …@claude-plugins-official`로 설치합니다.
 
+## Marketing Skills — 마케팅 스킬 라이브러리
+
+[coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)는 **전환·카피·SEO·성장**에 특화된 오픈 스킬 모음(40개+)입니다.
+클로드 코드·Cursor·Codex 등 [Agent Skills](https://agentskills.io) 규격을 따르는 에이전트에서 쓸 수 있습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 기반 | `product-marketing` 스킬 → `.agents/product-marketing.md`에 제품·타깃·포지셔닝 기록 후 다른 스킬이 참조 |
+| 대표 스킬 | `copywriting`, `cro`, `launch`, `marketing-plan`, `emails`, `seo-audit`, `ai-seo`, `ads` |
+| 책 연결 | 6.2.1절 캠페인 브리프, 8.3절 데일리핏 카피·랜딩, 2장 마케팅 프롬프트 심화 |
+
+### 마케팅 도구 3단계
+
+| 단계 | 도구 | 하는 일 |
+| --- | --- | --- |
+| 기획·캘린더 | knowledge-work-plugins `marketing` | `/campaign-plan`, Ahrefs·HubSpot 연동 |
+| 카피·CRO·런칭 | **Marketing Skills** | `copywriting`·`cro`·`launch`·`marketing-plan` |
+| 출시 후 SEO | [Claude SEO](../ch07-클로드-코드-생각을-실행-가능한-결과물로-바꾸기/README.md#claude-seo--사이트랜딩-seo-감사) | `/seo audit`·schema·GEO 기술 감사 |
+
+### 설치 (클로드 코드)
+
+```bash
+npx skills add coreyhaines31/marketingskills          # 전체 설치 (권장)
+npx skills add coreyhaines31/marketingskills --skill cro copywriting launch
+```
+
+클로드 코드 플러그인:
+
+```
+/plugin marketplace add coreyhaines31/marketingskills
+/plugin install marketing-skills
+```
+
+먼저 제품 맥락을 채우세요: "제품 마케팅 컨텍스트 문서 만들어줘" → `product-marketing` 스킬이 `.agents/product-marketing.md`를 생성합니다.
+
+```
+/copywriting
+/cro
+/launch
+/marketing-plan
+```
+
+> 터미널·에이전트가 처음이라면 [Coding for Marketers](https://codingformarketers.com) 가이드와 4장 스킬 구조를 함께 보면 좋습니다.
+
 ## Claude SEO — 캠페인 랜딩·사이트 출시 후 점검
 
-코워크 `marketing` 플러그인(예제 6.2 `/campaign-plan`)으로 **캠페인 브리프·콘텐츠**를 만든 뒤, 랜딩·사이트를 배포했다면 [Claude SEO](https://github.com/AgriciDaniel/claude-seo)로 **기술 SEO**를 점검할 수 있습니다.
+Marketing Skills로 **카피·CRO**를 다듬고 랜딩·사이트를 배포한 뒤, [Claude SEO](https://github.com/AgriciDaniel/claude-seo)로 **기술 SEO**를 점검할 수 있습니다.
 
 | 항목 | 내용 |
 | --- | --- |
@@ -78,7 +122,8 @@
 | wshobson/agents | https://github.com/wshobson/agents | AI 팀·에이전트 구성 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `subagent-driven-development`·`dispatching-parallel-agents` 등 AI 팀 분업 패턴 |
 | garrytan/gstack | https://github.com/garrytan/gstack | CEO·디자이너·QA·릴리스 역할 슬래시 명령 — 6.3.6절 AI 팀의 클로드 코드 버전 |
-| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | 캠페인 랜딩·사이트 `/seo audit` — marketing 플러그인과 출시 후 짝 |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 카피·CRO·런칭·SEO 등 마케팅 스킬 40+. `npx skills add` |
+| AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | 캠페인 랜딩·사이트 `/seo audit` — 출시 후 기술 SEO |
 | claude.com/download | https://claude.com/download | 클로드 데스크톱·코워크 설치 |
 
 ## 실전 활용 사례 — 앤트로픽 디자인 리드 Jenny Wen의 코워크 활용법

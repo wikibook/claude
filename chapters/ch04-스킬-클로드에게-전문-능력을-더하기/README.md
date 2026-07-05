@@ -60,6 +60,17 @@
 | knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../plugins/README.md) |
 | claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 `SKILL.md`·플레이북 `CLAUDE.md`·cold-start interview 패턴 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills`로 스킬 작성법 학습, `brainstorming`·`test-driven-development` 등 실전 워크플로 스킬 참고 |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 마케팅 스킬 40+(`copywriting`, `cro`, `launch` …). `product-marketing`이 다른 스킬의 공통 맥락 |
+
+### Marketing Skills — 스킬이 서로 참조하는 패턴
+
+4.4절에서 만든 `학습-보조`처럼, [Marketing Skills](https://github.com/coreyhaines31/marketingskills)는 **`product-marketing`을 먼저 읽고** 카피·CRO·SEO 작업을 이어갑니다. 4.3절 `SKILL.md` 구조·상호 참조를 실전 마케팅 워크플로에서 보려면 `skills/copywriting/SKILL.md` 등을 열어보세요.
+
+```bash
+npx skills add coreyhaines31/marketingskills --skill product-marketing copywriting
+```
+
+6장 캠페인·8장 랜딩과 연결하는 전체 흐름은 [6장 README](../ch06-코워크-함께-일하는-클로드/README.md#marketing-skills--마케팅-스킬-라이브러리)를 참고하세요.
 
 ### Superpowers 스킬이 책 개념과 맞닿는 지점
 
