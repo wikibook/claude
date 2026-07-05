@@ -81,6 +81,7 @@ npx skills add anthropics/skills --list    # 목록만 보기
 | knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../plugins/README.md) |
 | claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 `SKILL.md`·플레이북 `CLAUDE.md`·cold-start interview 패턴 참고 |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills`로 스킬 작성법 학습, `brainstorming`·`test-driven-development` 등 실전 워크플로 스킬 참고 |
+| mattpocock/skills | https://github.com/mattpocock/skills | `writing-great-skills` 스킬 작성 참고. 7장 `/grill-with-docs`·`/tdd`와 연결 |
 | coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | 마케팅 스킬 40+(`copywriting`, `cro`, `launch` …). `product-marketing`이 다른 스킬의 공통 맥락 |
 
 ### Marketing Skills — 스킬이 서로 참조하는 패턴
@@ -92,6 +93,16 @@ npx skills add coreyhaines31/marketingskills --skill product-marketing copywriti
 ```
 
 6장 캠페인·8장 랜딩과 연결하는 전체 흐름은 [6장 README](../ch06-코워크-함께-일하는-클로드/README.md#marketing-skills--마케팅-스킬-라이브러리)를 참고하세요.
+
+### Matt Pocock Skills — 스킬 작성·엔지니어링 연결
+
+4.3절 `skill-creator`로 스킬을 만든 뒤 품질을 높이려면 [mattpocock/skills](https://github.com/mattpocock/skills)의 **`writing-great-skills`**를 참고하세요. 예측 가능한 스킬 문서 작성 원칙을 정리해 두었습니다.
+
+```bash
+npx skills add mattpocock/skills --skill writing-great-skills setup-matt-pocock-skills
+```
+
+7장에서 코드 작업 전 정렬·TDD 흐름은 [7장 README](../ch07-클로드-코드-생각을-실행-가능한-결과물로-바꾸기/README.md#matt-pocock-skills--실전-엔지니어링-워크플로)를 참고하세요.
 
 ### Superpowers 스킬이 책 개념과 맞닿는 지점
 

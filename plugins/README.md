@@ -172,6 +172,8 @@ claude plugin install pitch-agent@claude-for-financial-services
 > 책 4장(스킬), 6장(AI 팀·에이전트 협업), 7장(클로드 코드)과 연결해 보면 좋습니다.
 > Cursor·Codex·Pi 등 다른 코딩 에이전트용 설치법은 [저장소 README](https://github.com/obra/superpowers#installation)를 참고하세요.
 
+> 작업 전 정렬·PRD·TDD 슬래시 스킬: [mattpocock/skills](https://github.com/mattpocock/skills) (`npx skills add mattpocock/skills`, `/setup-matt-pocock-skills`) — Superpowers와 함께 써도 됩니다. 7장 README 참고.
+
 ## gstack — 가상 엔지니어링 팀
 
 [garrytan/gstack](https://github.com/garrytan/gstack)는 YC CEO Garry Tan이 실제로 쓰는 **클로드 코드 슬래시 명령 묶음**입니다.
@@ -231,6 +233,7 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 | 저장소 | URL | 설명 |
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | Superpowers 플러그인 소스·스킬 라이브러리·개발 방법론 |
+| mattpocock/skills | https://github.com/mattpocock/skills | `/grill-with-docs`·`/to-prd`·`/tdd`·`writing-great-skills` |
 | garrytan/gstack | https://github.com/garrytan/gstack | Garry Tan의 클로드 코드 슬래시 명령·가상 엔지니어링 팀 |
 | anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | 클로드 코드 공식 플러그인 마켓플레이스 소스 |
 | anthropics/knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 마케팅·영업·법무·재무 등 11개 지식 업무 플러그인 |

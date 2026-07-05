@@ -52,6 +52,7 @@
 npx skills add anthropics/skills              # 저장소 전체
 npx skills add coreyhaines31/marketingskills --skill copywriting cro
 npx skills add obra/superpowers --skill brainstorming test-driven-development
+npx skills add mattpocock/skills --skill grill-with-docs tdd to-prd
 ```
 
 | 항목 | 내용 |
@@ -66,6 +67,8 @@ npx skills add obra/superpowers --skill brainstorming test-driven-development
 | --- | --- | --- |
 | `anthropics/skills` · `skill-creator` | [skill-creator](https://www.skills.sh/anthropics/skills/skill-creator) | 4장 |
 | `obra/superpowers` · `brainstorming` | [brainstorming](https://www.skills.sh/obra/superpowers/brainstorming) | 7장 |
+| `mattpocock/skills` · `tdd` | [tdd](https://www.skills.sh/mattpocock/skills/tdd) | 4장, 7장 |
+| `mattpocock/skills` · `grill-with-docs` | [grill-with-docs](https://www.skills.sh/mattpocock/skills/grill-with-docs) | 7장 |
 | `coreyhaines31/marketingskills` · `copywriting` | [copywriting](https://www.skills.sh/coreyhaines31/marketingskills/copywriting) | 6장 |
 | `nextlevelbuilder/ui-ux-pro-max-skill` | [ui-ux-pro-max](https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max) | 8장 |
 | `pbakaus/impeccable` | [impeccable](https://www.skills.sh/pbakaus/impeccable/impeccable) | 8장 |
@@ -97,6 +100,7 @@ npx skills add obra/superpowers --skill brainstorming test-driven-development
 | AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | SEO 분석 플러그인. `/seo audit`·schema·GEO·25개 서브스킬 |
 | Notion Skills for Claude | https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0 | 노션이 공식 제공하는 클로드 스킬 모음입니다. |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills` 스킬로 작성·테스트 방법을 배우고, 협업·TDD·디버깅 스킬을 참고할 수 있습니다. |
+| mattpocock/skills | https://github.com/mattpocock/skills | `/grill-with-docs`·`/to-prd`·`/tdd`·`writing-great-skills`. `npx skills add mattpocock/skills` |
 | garrytan/gstack | https://github.com/garrytan/gstack | 슬래시 명령 형태의 역할별 스킬(CEO·QA·디자인·릴리스). `~/.claude/skills/gstack` 설치 |
 
 ## Superpowers 스킬 라이브러리

@@ -61,6 +61,42 @@
 
 상세 스킬 목록·다른 에이전트(Cursor, Codex 등) 설치법은 [플러그인 목록의 Superpowers 절](../../plugins/README.md#superpowers--에이전트-스킬-프레임워크)에서 정리했습니다.
 
+## Matt Pocock Skills — 실전 엔지니어링 워크플로
+
+[mattpocock/skills](https://github.com/mattpocock/skills)는 **작고 조합 가능한** 엔지니어링 스킬 모음입니다.
+요구사항 정렬 → PRD·이슈 분해 → TDD → 아키텍처 점검까지, 클로드 코드·Codex·Cursor에서 같은 흐름을 씁니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | `/grill-me`·`/grill-with-docs` 정렬, `/to-prd`·`/to-issues` 계획, `/tdd` red-green-refactor, `/improve-codebase-architecture` |
+| 공유 언어 | `grill-with-docs`가 `CONTEXT.md`·ADR로 프로젝트 용어를 정리 → 7.3절 `CLAUDE.md`와 병행 |
+| 책 연결 | 7.2절 첫 작업 전 의도 확인, 7.3절 `CLAUDE.md`·루틴, 7.4~7.5절 구현·디버깅 |
+
+### Superpowers vs Matt Pocock Skills
+
+| | Superpowers | mattpocock/skills |
+| --- | --- | --- |
+| 초점 | 플러그인 **방법론**·서브에이전트 자동 적용 | **슬래시 명령** 단위의 정렬·TDD·PRD·트리아지 |
+| 대표 | `brainstorming`, `writing-plans`, `test-driven-development` | `/grill-with-docs`, `/to-prd`, `/tdd`, `/triage` |
+| 책 연결 | 7.5절 장시간·분업 | 7.2~7.4절 **시작 전 정렬**·작은 단위 피드백 |
+
+### 설치
+
+```bash
+npx skills add mattpocock/skills
+```
+
+설치 시 **`setup-matt-pocock-skills`**를 반드시 선택한 뒤, 프로젝트에서 한 번 실행하세요.
+
+```
+/setup-matt-pocock-skills    # 이슈 트래커·트리아지 라벨·문서 경로 설정
+/grill-with-docs             # 작업 전 정렬 + CONTEXT.md·ADR
+/to-prd                      # 대화 내용 → PRD
+/tdd                         # 실패 테스트 먼저 → 구현
+```
+
+인기 스킬·설치 수는 [skills.sh](https://www.skills.sh/mattpocock/skills)에서 확인할 수 있습니다. 스킬 작성 참고는 4장 `writing-great-skills`·`skill-creator`와 함께 보면 좋습니다.
+
 ## gstack — 역할별 슬래시 명령 팀
 
 [garrytan/gstack](https://github.com/garrytan/gstack)는 클로드 코드에 **가상 엔지니어링 팀**을 붙이는 오픈소스 도구입니다.
@@ -117,6 +153,7 @@
 | 자료 | URL | 설명 |
 | --- | --- | --- |
 | obra/superpowers | https://github.com/obra/superpowers | 설계·계획·TDD·서브에이전트 개발 방법론과 스킬 라이브러리 |
+| mattpocock/skills | https://github.com/mattpocock/skills | `/grill-with-docs`·`/to-prd`·`/tdd`·`/triage` 실전 엔지니어링 스킬 |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/office-hours`→`/review`→`/qa`→`/ship` 역할별 슬래시 명령 스프린트 |
 | AgriciDaniel/claude-seo | https://github.com/AgriciDaniel/claude-seo | `/seo audit`·schema·GEO 등 25개 SEO 명령. 병렬 감사·로컬 리포트 |
 | anthropics/claude-plugins-official | https://github.com/anthropics/claude-plugins-official | `/plugin install …@claude-plugins-official` 공식 마켓플레이스 |
