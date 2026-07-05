@@ -16,6 +16,36 @@
 
 > 초안은 빠르게 만들고, 브랜드 기준·데이터 정확성·내보내기 형식은 사람이 확인하세요.
 
+## Impeccable — 디자인 어휘·AI slop 줄이기
+
+[Impeccable](https://impeccable.style/)는 에이전트에게 **계층·대비·절제** 같은 디자인 어휘를 주고, 흔한 AI UI 패턴(그라데이션 남용·과한 둥근 모서리 등)을 걸러 주는 도구입니다.
+클로드 디자인으로 만든 시안을 **코드·목업으로 다듬을 때**, 또는 8.4절 디자인 시스템을 문서화할 때 함께 쓰면 좋습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | 23개 디자인 명령(`/polish`, `/typeset`, `/colorize`, `/layout`, `/adapt` …)으로 수정 의도를 구체적으로 지시 |
+| 디자인 시스템 | 기존 토큰·컴포넌트를 덮어쓰지 않고 상속. `/impeccable document`로 `DESIGN.md`보내기 |
+| 제품 맥락 | `PRODUCT.md`에 사용자·톤·금지 스타일 기록 → 모든 명령이 참조 |
+| 품질 검사 | `npx impeccable detect src/` — 45개 규칙으로 AI slop 패턴 탐지(CI·PR 체크 가능) |
+| 책 연결 | 8.3절 캠페인 시안 다듬기, 8.4절 브랜드 규칙 → `DESIGN.md`·`PRODUCT.md`로 이어지기 |
+
+### 설치 (클로드 코드·Cursor 등)
+
+```bash
+npx impeccable install    # Node 24+, 사용 중인 에이전트에 맞춰 설치
+/impeccable init          # 첫 실행 — PRODUCT.md·DESIGN.md 초기화
+```
+
+클로드 코드 마켓플레이스:
+
+```
+/plugin marketplace add pbakaus/impeccable
+```
+
+이후 `/plugin`에서 Impeccable 설치. Live Mode(실행 중 앱에서 변형 비교)는 [시작 가이드](https://impeccable.style/tutorials/getting-started)와 [명령 레퍼런스](https://impeccable.style/docs)를 참고하세요.
+
+> 클로드 디자인 캔버스 결과는 사람이 최종 확인합니다. Impeccable은 **보낸 HTML·프론트엔드 코드**를 다듬는 단계에 가깝습니다 — gstack의 `/design-review`와도 역할이 겹칩니다.
+
 ## 공식 문서
 
 | 문서 | URL | 설명 |
