@@ -112,6 +112,53 @@ python3 .claude/skills/ui-ux-pro-max/scripts/search.py "SaaS dashboard" --design
 
 설치·전체 워크플로는 [플러그인 목록의 gstack 절](../../plugins/README.md#gstack--가상-엔지니어링-팀)을 참고하세요.
 
+## Frontend Slides — HTML 발표 자료 만들기
+
+[Frontend Slides](https://github.com/zarazhangrui/frontend-slides)는 **단일 HTML 파일**로 16:9 웹 프레젠테이션을 만드는 코딩 에이전트 스킬입니다.
+클로드 디자인 캔버스로 슬라이드 초안을 뽑은 뒤, **브라우저에서 바로 열고 공유·배포**할 HTML 덱이 필요할 때 8.3절 예제 8.2·8.3과 연결해 보세요.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | 스타일 미리보기 3종 비교 → 선택 → 전체 슬라이드 생성. PowerPoint(`.pptx`) → HTML 변환 지원 |
+| 출력 | npm·빌드 없이 인라인 CSS/JS 단일 HTML. 접근성·16:9 고정 |
+| 스타일 | 12+ 프리셋 + `beautiful-html-templates` 볼드 팩 34종. AI slop(보라 그라데이션 등) 회피 |
+| 책 연결 | 8.3절 예제 8.2 발표 슬라이드, 8.3 Q&A 슬라이드. 기존 PPT를 웹으로 옮길 때 |
+
+### 클로드 디자인 vs Frontend Slides
+
+| | 클로드 디자인 | Frontend Slides |
+| --- | --- | --- |
+| 초점 | 캔버스에서 빠른 시각 초안 | **코드로 재현·배포 가능한 HTML 덱** |
+| 브랜드 | Design Systems로 색상·폰트 적용 | 스타일 프리뷰 선택·PPT 변환 |
+| 책 연결 | 예제 8.1~8.6 요청문 | 클로드 코드 `/frontend-slides:frontend-slides` |
+
+### 설치 (클로드 코드)
+
+아래 두 줄은 **각각 별도 메시지**로 실행하세요. HTTPS URL을 쓰면 SSH `known_hosts` 오류를 피할 수 있습니다.
+
+```
+/plugin marketplace add https://github.com/zarazhangrui/frontend-slides
+/plugin install frontend-slides@frontend-slides
+```
+
+수동 설치:
+
+```bash
+git clone https://github.com/zarazhangrui/frontend-slides.git ~/.claude/skills/frontend-slides
+```
+
+플러그인 설치 후 `/frontend-slides:frontend-slides`, 수동 설치 후 `/frontend-slides`로 호출합니다.
+
+```
+/frontend-slides:frontend-slides
+
+> "데일리핏 100일 루틴 캠페인 발표 슬라이드 10장 만들어줘"
+```
+
+PPT 변환은 `scripts/extract-pptx.py`로 본문·이미지·노트를 추출한 뒤 같은 스타일 선택 흐름을 따릅니다. 입문 튜토리얼은 [YouTube 워크스루](https://www.youtube.com/watch?v=372Iksaz8b0)를 참고하세요.
+
+> Cursor·Codex 등 다른 에이전트는 저장소 링크와 `SKILL.md`를 넘기면 같은 흐름을 따를 수 있습니다.
+
 ## 추천 자료 — 디자인 도구
 
 함께 쓰면 좋은 도구입니다. 사용 전 각 사이트에서 최신 정보를 확인하세요.
@@ -132,5 +179,6 @@ python3 .claude/skills/ui-ux-pro-max/scripts/search.py "SaaS dashboard" --design
 | pbakaus/impeccable | https://github.com/pbakaus/impeccable | Impeccable 스킬·CLI 소스 (`npx impeccable install`) |
 | UI UX Pro Max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙·디자인 시스템 자동 생성. `uipro init --ai claude` |
 | uupm.cc | https://uupm.cc | UI UX Pro Max 공식 사이트·Premium 안내 |
+| Frontend Slides | https://github.com/zarazhangrui/frontend-slides | HTML 웹 슬라이드·PPT 변환 스킬. `/frontend-slides:frontend-slides` |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |
