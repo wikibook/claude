@@ -17,6 +17,26 @@
 > 책 본문은 skill-creator가 스킬 파일을 자동으로 만들어 주므로 `SKILL.md` 원문을 싣지 않습니다.
 > 여기 파일은 책에서 설명한 동작과 출력 형식에 맞춰 같은 결과가 나오도록 재현한 것입니다.
 
+## skills.sh — 스킬 탐색·설치
+
+[skills.sh](https://www.skills.sh/)는 Agent Skills **디렉터리·리더보드**입니다.
+4.2절에서 배운 스킬 형식을 실전 저장소에서 찾고, 클로드 코드·Cursor·Codex 등에 바로 설치할 때 씁니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | 분야별 검색, All Time / Trending / Hot 순위, 에이전트별 호환 안내 |
+| 설치 | `npx skills add <owner/repo>` — [vercel-labs/skills](https://github.com/vercel-labs/skills) CLI |
+| 책 연결 | 4.2절 커뮤니티 스킬 고르기, 4.3절 `skill-creator`로 만든 뒤 배포 참고 |
+
+```bash
+npx skills add anthropics/skills --skill skill-creator
+npx skills add anthropics/skills --list    # 목록만 보기
+```
+
+스펙·검증은 [agentskills.io](https://agentskills.io), **찾기·설치**는 skills.sh, 전체 목록·설치 예시는 [스킬 카탈로그](../../skills/README.md#skills-directory--skillssh)를 참고하세요.
+
+> 4.2.2절 확인 습관: 리더보드에서 고른 스킬도 설치 전 `SKILL.md`를 열어 동작·권한을 읽어보세요.
+
 ## 공식 강의
 
 | 강의 | URL | 설명 |
@@ -55,7 +75,8 @@
 
 | 저장소 / 사이트 | URL | 설명 |
 | --- | --- | --- |
-| agentskills.io | https://agentskills.io | Agent Skills를 탐색하고 공유하는 공식 사이트입니다. |
+| skills.sh | https://www.skills.sh/ | Agent Skills 디렉터리·리더보드. `npx skills add` 설치 |
+| agentskills.io | https://agentskills.io | Agent Skills 스펙·탐색 공식 사이트 |
 | awesome-claude-skills (큐레이션) | https://github.com/travisvn/awesome-claude-skills | 분야별로 검증된 커뮤니티 스킬을 모아둔 목록입니다. |
 | knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 역할별 `skills/`·`commands/` 구조 참고. 설치·커스터마이즈는 6장·[플러그인 목록](../../plugins/README.md) |
 | claude-for-legal | https://github.com/anthropics/claude-for-legal | 법무 `SKILL.md`·플레이북 `CLAUDE.md`·cold-start interview 패턴 참고 |

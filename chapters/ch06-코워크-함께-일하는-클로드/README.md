@@ -81,6 +81,8 @@ npx skills add coreyhaines31/marketingskills          # 전체 설치 (권장)
 npx skills add coreyhaines31/marketingskills --skill cro copywriting launch
 ```
 
+설치 명령과 인기 순위는 [skills.sh](https://www.skills.sh/coreyhaines31/marketingskills/copywriting)에서도 확인할 수 있습니다.
+
 클로드 코드 플러그인:
 
 ```

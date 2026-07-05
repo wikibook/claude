@@ -6,8 +6,9 @@
 ## 스킬을 살펴보는 순서
 
 1. 먼저 공식 문서에서 스킬의 개념과 사용 방식을 확인합니다.
-2. 공식 스킬 저장소에서 검증된 예시를 봅니다.
-3. 필요한 경우 커뮤니티 스킬을 참고하되, 설치 전에 `SKILL.md`를 열어 내용과 권한을 직접 확인합니다.
+2. [skills.sh](https://www.skills.sh/)에서 분야·인기 순으로 스킬을 검색합니다.
+3. 공식·커뮤니티 저장소의 `SKILL.md`를 열어 동작을 확인한 뒤 `npx skills add <owner/repo>`로 설치합니다.
+4. 설치 전에는 `SKILL.md`의 권한·외부 호출 범위를 반드시 직접 확인합니다(책 4.2.2절).
 
 ## 책에서 만든 스킬 (바로 받기)
 
@@ -42,11 +43,41 @@
 > 분류와 목록은 실제 저장소 구조(`skills/` 폴더)와 README를 따랐습니다.
 > 저장소는 스킬을 자주 추가하므로 최신 목록은 위 링크에서 확인하세요.
 
+## Skills Directory — skills.sh
+
+[skills.sh](https://www.skills.sh/)는 오픈 Agent Skills 생태계의 **검색·리더보드·설치** 포털입니다.
+클로드 코드·Cursor·Codex·Windsurf 등 20+ 에이전트에서 같은 스킬을 한 줄로 설치할 수 있습니다.
+
+```bash
+npx skills add anthropics/skills              # 저장소 전체
+npx skills add coreyhaines31/marketingskills --skill copywriting cro
+npx skills add obra/superpowers --skill brainstorming test-driven-development
+```
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | 스킬 검색, All Time / Trending / Hot 리더보드, 에이전트별 호환 안내 |
+| CLI | [vercel-labs/skills](https://github.com/vercel-labs/skills) — `npx skills add`가 skills.sh와 연동 |
+| 책 연결 | 4장 탐색·설치, 6·7·8장에 실린 커뮤니티 스킬 설치 |
+
+### 이 저장소에 소개된 스킬 — skills.sh에서 찾기
+
+| 저장소·스킬 | skills.sh | 연계 장 |
+| --- | --- | --- |
+| `anthropics/skills` · `skill-creator` | [skill-creator](https://www.skills.sh/anthropics/skills/skill-creator) | 4장 |
+| `obra/superpowers` · `brainstorming` | [brainstorming](https://www.skills.sh/obra/superpowers/brainstorming) | 7장 |
+| `coreyhaines31/marketingskills` · `copywriting` | [copywriting](https://www.skills.sh/coreyhaines31/marketingskills/copywriting) | 6장 |
+| `nextlevelbuilder/ui-ux-pro-max-skill` | [ui-ux-pro-max](https://www.skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max) | 8장 |
+| `pbakaus/impeccable` | [impeccable](https://www.skills.sh/pbakaus/impeccable/impeccable) | 8장 |
+
+> 스펙·검증 도구는 [agentskills.io](https://agentskills.io). **찾기**는 skills.sh, **만들기**는 4.3절 `skill-creator` 순서를 권장합니다.
+
 ## 공식 사이트
 
 | 사이트 | URL | 설명 |
 | --- | --- | --- |
-| agentskills.io | https://agentskills.io | Agent Skills를 탐색하고 공유하는 공식 사이트입니다. |
+| skills.sh | https://www.skills.sh/ | Agent Skills 디렉터리·리더보드. `npx skills add` 설치 |
+| agentskills.io | https://agentskills.io | Agent Skills 스펙·탐색·공유 공식 사이트 |
 | agentskills/agentskills | https://github.com/agentskills/agentskills | 스킬 스펙과 검증 도구를 제공하는 저장소입니다. |
 
 ## 커뮤니티 스킬
