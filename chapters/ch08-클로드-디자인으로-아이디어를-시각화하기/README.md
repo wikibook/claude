@@ -46,6 +46,52 @@ npx impeccable install    # Node 24+, 사용 중인 에이전트에 맞춰 설�
 
 > 클로드 디자인 캔버스 결과는 사람이 최종 확인합니다. Impeccable은 **보낸 HTML·프론트엔드 코드**를 다듬는 단계에 가깝습니다 — gstack의 `/design-review`와도 역할이 겹칩니다.
 
+## UI UX Pro Max — 업종별 디자인 시스템 생성
+
+[UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)는 **67개 UI 스타일·161개 업종 규칙·색상·타이포**를 조합해, 요청만으로 맞춤 디자인 시스템을 제안하는 AI 스킬입니다.
+클로드 디자인에서 **8.4절 색상·폰트를 정하기 전** 후보 팔레트와 스타일 방향을 뽑을 때, 또는 캠페인 시안을 **React·Tailwind 코드**로 이어갈 때 쓰기 좋습니다.
+
+| 항목 | 내용 |
+| --- | --- |
+| 역할 | 업종(헬스·핀테크·이커머스 등)에 맞는 레이아웃 패턴·스타일·색상·폰트·안티패턴을 한 번에 제안 |
+| 디자인 시스템 | `design-system/MASTER.md` + `pages/*.md` 계층 구조로 세션 간 규칙 유지 |
+| 스택 가이드 | React, Next.js, shadcn/ui, Tailwind, Vue, Flutter 등 22개 스택별 UI 가이드 |
+| 책 연결 | 8.3.3절 데일리핏 브랜드 설정 참고, 8.4절 다듬기 전 시스템 초안 생성 |
+
+### Impeccable vs UI UX Pro Max
+
+| | Impeccable | UI UX Pro Max |
+| --- | --- | --- |
+| 초점 | 기존 시안·코드 **다듬기**, AI slop 탐지 | 업종·제품 맥락에서 **디자인 시스템 초안 생성** |
+| 대표 도구 | `/polish`, `DESIGN.md` 문서화 | `uipro`, `search.py --design-system` |
+| 책 연결 | 8.4절 후반(품질·일관성) | 8.3~8.4절 전반(방향·토큰 설정) |
+
+### 설치 (클로드 코드·Cursor 등)
+
+```bash
+npm install -g ui-ux-pro-max-cli
+uipro init --ai claude      # 프로젝트에 스킬 설치
+# uipro init --ai claude --global   # ~/.claude/skills/ 전역 설치
+```
+
+클로드 코드 마켓플레이스:
+
+```
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+/plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+```
+
+`scripts/search.py` 검색 엔진을 쓰려면 **Python 3.x**가 필요합니다. 업종·스타일을 직접 조회할 때:
+
+```bash
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "habit tracker wellness" --design-system -p "데일리핏" -f markdown
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "SaaS dashboard" --design-system --persist -p "MyApp"
+```
+
+한국어 README는 [README.zh.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/README.zh.md), 상세 가이드는 [uupm.cc](https://uupm.cc)를 참고하세요.
+
+> 스킬 모드에서는 "데일리핏 헬스 앱 랜딩 페이지 만들어줘"처럼 자연어로 요청하면 디자인 시스템 생성부터 코드까지 이어집니다. 클로드 디자인 캔버스 결과와 병행할 때는 제안된 Primary·Secondary 색·폰트를 Design Systems 설정값으로 옮기면 됩니다.
+
 ## 공식 문서
 
 | 문서 | URL | 설명 |
@@ -84,5 +130,7 @@ npx impeccable install    # Node 24+, 사용 중인 에이전트에 맞춰 설�
 | Developer Icons | https://github.com/xandemon/developer-icons | 개발자 아이콘 오픈소스 모음입니다. |
 | Impeccable | https://impeccable.style/ | 디자인 명령 23종·`DESIGN.md`·AI slop 탐지. 클로드 코드·Cursor 등 |
 | pbakaus/impeccable | https://github.com/pbakaus/impeccable | Impeccable 스킬·CLI 소스 (`npx impeccable install`) |
+| UI UX Pro Max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙·디자인 시스템 자동 생성. `uipro init --ai claude` |
+| uupm.cc | https://uupm.cc | UI UX Pro Max 공식 사이트·Premium 안내 |
 | Taste Skill | https://www.tasteskill.dev | 이미지·디자인 감각을 보강하는 스킬입니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | `/design-shotgun`, `/design-html`, `/design-review` 등 디자인 스프린트 명령 |

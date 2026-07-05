@@ -60,6 +60,7 @@
 | forrestchang/andrej-karpathy-skills | https://github.com/forrestchang/andrej-karpathy-skills | Andrej Karpathy 스타일의 CLAUDE.md 기반 스킬 예시입니다. |
 | kepano/obsidian-skills | https://github.com/kepano/obsidian-skills | 옵시디언 작업에 특화된 스킬 예시입니다. |
 | Leonxlnx/taste-skill | https://github.com/Leonxlnx/taste-skill | 이미지와 디자인 감각을 보강하는 스킬입니다. |
+| nextlevelbuilder/ui-ux-pro-max-skill | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | 67 UI 스타일·161 업종 규칙으로 디자인 시스템 자동 생성. `uipro init --ai claude` |
 | Notion Skills for Claude | https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0 | 노션이 공식 제공하는 클로드 스킬 모음입니다. |
 | obra/superpowers | https://github.com/obra/superpowers | `writing-skills` 스킬로 작성·테스트 방법을 배우고, 협업·TDD·디버깅 스킬을 참고할 수 있습니다. |
 | garrytan/gstack | https://github.com/garrytan/gstack | 슬래시 명령 형태의 역할별 스킬(CEO·QA·디자인·릴리스). `~/.claude/skills/gstack` 설치 |
