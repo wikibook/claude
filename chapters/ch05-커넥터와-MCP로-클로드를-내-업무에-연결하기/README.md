@@ -5,10 +5,15 @@
 
 ## 이 장에서 받을 수 있는 것
 
-5장은 내 업무 도구와 클로드를 연결하는 개념을 다룹니다. 연결 설정은 서비스와 조직 정책에 따라 달라지므로, 저장소에는 공식 문서와 안전하게 살펴볼 수 있는 참조 서버·디렉터리를 모았습니다.
+5장은 내 업무 도구와 클로드를 연결하는 방법을 다룹니다. 연결 설정은 서비스와 조직 정책에 따라
+달라지므로, 저장소에는 연결한 뒤 바로 써 볼 수 있는 프롬프트와 안전하게 살펴볼 수 있는
+공식 문서·참조 서버를 모았습니다.
 
 | 자료 | 내용 | 책 연결 |
 | --- | --- | --- |
+| [`프롬프트/커넥터-대표질문.md`](프롬프트/커넥터-대표질문.md) | 드라이브 다문서·검색, 지메일·슬랙·노션 대표 질문 | 5.2.1~5.2.2절 예제 5.1~5.2 |
+| [`프롬프트/스프레드시트-자동화.md`](프롬프트/스프레드시트-자동화.md) | 수식 요청, 오류 해결, 데이터 정리, 인사이트 도출 | 5.4절 |
+| [`프롬프트/웹검색-리서치.md`](프롬프트/웹검색-리서치.md) | 시장 동향·뉴스·경쟁사 리서치 요청문 | 5.5절 |
 | MCP 공식 문서 | 프로토콜 개념, 서버·클라이언트 구조 | 5.3절 |
 | 공식 참조 서버 목록 | 파일, 웹 가져오기, 메모리, Git 예시 | 5.3절 |
 | MCP 디렉터리와 큐레이션 | 더 많은 서버를 찾을 때 참고할 목록 | 5장 전체 |
@@ -21,6 +26,7 @@
 | --- | --- | --- |
 | MCP 서버란 무엇인가 | https://support.claude.com/en/articles/8364676-what-are-mcp-servers | MCP 서버의 개념과 클로드에서의 사용법을 설명합니다. |
 | 원격 MCP 커넥터 시작하기 | https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp | MCP 서버와 클로드 커넥터 연결 방식을 단계별로 안내합니다. |
+| MCP 입문 강의 | https://anthropic.skilljar.com/introduction-to-model-context-protocol | MCP 개념을 강의 형식으로 따라가며 익힐 수 있습니다. |
 | MCP 공식 사이트 | https://modelcontextprotocol.io | Model Context Protocol 전체 문서와 스펙을 제공합니다. |
 | MCP 공식 레지스트리 | https://registry.modelcontextprotocol.io | 공식 MCP 서버 레지스트리입니다. |
 | 클로드 API 문서 | https://docs.anthropic.com | 개발자용 API 레퍼런스와 통합 가이드입니다. |
@@ -50,3 +56,5 @@
 | Smithery | https://smithery.ai | MCP 서버를 검색하고 설치할 수 있는 플랫폼입니다. |
 | block/goose | https://github.com/block/goose | MCP를 지원하는 오픈소스 AI 에이전트입니다. |
 | lastmile-ai/mcp-agent | https://github.com/lastmile-ai/mcp-agent | MCP 기반 에이전트 워크플로우 프레임워크입니다. |
+| microsoft/markitdown | https://github.com/microsoft/markitdown | PDF·Office 문서를 마크다운으로 변환(드라이브 문서 분석 맥락) |
+| googleworkspace/cli | https://github.com/googleworkspace/cli | Google Workspace CLI |

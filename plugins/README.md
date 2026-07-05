@@ -1,9 +1,19 @@
 # 플러그인 목록
 
 > 책 6장과 연결되는 보충 자료입니다.
-> 클로드 코드 플러그인은 특정 작업 환경이나 외부 서비스를 클로드 코드와 연결해 줍니다.
+> **코워크 업무 플러그인**(Marketing, Sales 등)과 **클로드 코드 플러그인**은 설치 위치와 용도가 다릅니다.
 
-## 설치 기본 흐름
+## 코워크 업무 플러그인 (책 6.2절)
+
+책 표 6.2의 Marketing, Sales, Legal 등은 아래 저장소에서 확인합니다.
+코워크 대화창 **+ → 플러그인** 메뉴에서 설치합니다.
+
+| 저장소 | URL | 설명 |
+| --- | --- | --- |
+| knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 마케팅·영업·법무·재무·HR 등 업무 플러그인 |
+| financial-services | https://github.com/anthropics/financial-services | 금융 업무 특화 플러그인 |
+
+## 클로드 코드 플러그인 — 설치 기본 흐름
 
 클로드 코드에서 플러그인 페이지를 열고 안내에 따라 `/install` 명령을 실행합니다.
 조직 계정이나 회사 장비에서는 설치 전 권한과 보안 정책을 확인하세요.

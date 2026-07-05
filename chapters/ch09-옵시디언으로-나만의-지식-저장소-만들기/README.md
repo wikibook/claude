@@ -28,6 +28,11 @@ vault-template/
 | `CLAUDE.md` | 폴더 구조·작성 규칙·소스 처리·질문·점검 규칙 | 9.3.3절 예제 9.2 |
 | 기본 폴더 4종 | `sources/`·`wiki/`·`daily/`·`archive/` | 9.3.2절 예제 9.1 |
 | `wiki/me/*` | 나에 대한 첫 위키 페이지(예시) | 9.3.4절 예제 9.3 |
+| `sources/articles/2027-04-10-ai-product-management.md` | 9.4절 수집 실습용 샘플 소스 | 9.4절 |
+| [`프롬프트/위키-기반-질문.md`](프롬프트/위키-기반-질문.md) | 위키 기반 질문 | 9.5.2절 예제 9.5 |
+| [`프롬프트/주간-점검-lint.md`](프롬프트/주간-점검-lint.md) | 주간 점검 | 9.5.4절 예제 9.6 |
+| [`프롬프트/아침-브리핑.md`](프롬프트/아침-브리핑.md) | 아침 브리핑 | 9.5.5절 예제 9.7 |
+| [`프롬프트/회의록-위키-정리.md`](프롬프트/회의록-위키-정리.md) | 회의록→위키 정리 | 9.5.6절 예제 9.8 |
 
 > `wiki/me/` 안의 세 페이지는 책의 예시 인물(프로덕트 매니저)로 채워 두었습니다.
 > **본인 정보로 바꿔 쓰세요.** "나 자신이 첫 번째 엔티티입니다"(책 9.3.4절).
@@ -46,6 +51,7 @@ vault-template/
 | 자료 | URL | 설명 |
 | --- | --- | --- |
 | 옵시디언 공식 사이트 | https://obsidian.md | 옵시디언의 기본 기능과 플러그인을 확인할 수 있습니다. |
+| 옵시디언 커뮤니티 | https://community.obsidian.md | 커뮤니티가 만든 플러그인과 테마를 한곳에서 검색하고 둘러볼 수 있습니다. |
 | 옵시디언 플러그인 마켓 | https://obsidian.md/plugins | 공식 커뮤니티 플러그인을 검색하고 설치할 수 있습니다. |
 | 옵시디언 웹 클리퍼 | https://obsidian.md/clipper | 웹 페이지를 옵시디언 노트로 바로 저장하는 브라우저 확장입니다. |
 
@@ -53,12 +59,16 @@ vault-template/
 
 설치 전 옵시디언 플러그인 마켓에서 최신 버전과 설명을 확인하세요.
 
-| 플러그인 | 설명 |
-| --- | --- |
-| Smart Connections | 노트 간 의미적 유사도를 분석해 관련 노트를 추천합니다. 로컬 AI 연동도 지원합니다. |
-| Dataview | SQL 방식으로 노트 데이터를 쿼리하고 시각화합니다. |
-| Templater | 반복 노트 양식을 템플릿으로 자동화합니다. |
-| Periodic Notes | 일간·주간·월간 노트를 정해진 형식으로 자동 생성합니다. |
+| 플러그인 | URL | 설명 |
+| --- | --- | --- |
+| Smart Connections | https://github.com/brianpetro/obsidian-smart-connections | 현재 노트와 의미적으로 가까운 노트를 추천하고, 볼트 전체를 의미 기반으로 검색하는 플러그인입니다. 기본 흐름은 로컬 임베딩을 사용하므로 별도 API 키 없이 시작할 수 있습니다. |
+| Dataview | https://github.com/blacksmithgu/obsidian-dataview | SQL 방식으로 노트 데이터를 쿼리하고 시각화합니다. |
+| Templater | https://github.com/SilentVoid13/Templater | 반복 노트 양식을 템플릿으로 자동화합니다. |
+| Periodic Notes | https://github.com/liamcain/obsidian-periodic-notes | 일간·주간·월간 노트를 정해진 형식으로 자동 생성합니다. |
+
+Smart Connections는 볼트가 커진 뒤 효과가 큽니다. 책에서 만든 `sources/`와 `wiki/` 구조에 자료가 쌓이면, 현재 작성 중인 위키 페이지와 관련된 예전 메모를 자동으로 다시 찾아볼 수 있습니다. 클로드에게 정리를 맡기기 전에는 Smart Connections의 Connections view나 Lookup view로 관련 노트를 먼저 모으고, 그 결과를 클로드에게 "아래 후보 노트를 근거로 `wiki/`를 업데이트해 주세요"처럼 전달하면 좋습니다.
+
+다만 추천 결과는 "근거"가 아니라 "후보"입니다. 클로드가 답을 만들 때는 항상 원본 `sources/`나 기존 `wiki/` 페이지의 출처를 다시 확인하게 하세요.
 
 ### 클로드 + 옵시디언 연계
 

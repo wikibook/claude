@@ -1,4 +1,4 @@
-# 4장 스킬, 클로드에게 전문 능력 부여하기
+# 4장 스킬, 클로드에게 전문 능력을 더하기
 
 > **책 4장** 독자를 위한 보충 자료입니다.
 > 클로드 기능 변화에 맞춰 지속적으로 업데이트합니다.
@@ -49,6 +49,7 @@
 | agentskills.io | https://agentskills.io | Agent Skills를 탐색하고 공유하는 공식 사이트입니다. |
 | awesome-claude-skills (큐레이션) | https://github.com/travisvn/awesome-claude-skills | 분야별로 검증된 커뮤니티 스킬을 모아둔 목록입니다. |
 | knowledge-work-plugins | https://github.com/anthropics/knowledge-work-plugins | 생산성·세일즈·마케팅·법률·재무 등 업무 영역별 플러그인 묶음입니다(설치는 6장). |
+| obra/superpowers | https://github.com/obra/superpowers | skill-creator·에이전트 워크플로 참고 |
 
 > **확인 습관** — 커뮤니티 스킬은 설치 전에 `SKILL.md`를 열어 어떤 동작을 지시하는지 직접 읽어보세요.
 > 최근 업데이트(6개월 이내), 설명 문서(README)의 충실함도 함께 확인하면 좋습니다(책 4.2.2절).

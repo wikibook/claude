@@ -7,25 +7,27 @@
 
 ## 이 장에서 받을 수 있는 것
 
-1장은 클로드를 처음 쓰기 위한 개념과 준비를 다룹니다. 별도 실습 파일보다는 가입, 앱 설치, 모델 이해에 필요한 공식 링크를 중심으로 정리했습니다.
+1장은 클로드를 처음 쓰기 위한 개념과 준비를 다룹니다.
 
 | 자료 | 내용 | 책 연결 |
 | --- | --- | --- |
 | [시작하기](../../resources/시작하기.md) | 클로드 웹, 앱 다운로드, 요금제, 도움말 링크 | 1.2절 |
-| [용어집](../../resources/용어집.md) | 클로드, 모델, 프로젝트 등 반복 용어 정리 | 1장 전체 |
+| [프롬프트 템플릿 모음](../../resources/프롬프트-템플릿.md) | 예제 1.1~1.2 첫 대화 프롬프트 | 1.4절 |
+| [용어집](../../resources/용어집.md) | 클로드, 모델, 프로젝트 등 반복 용어 | 1장 전체 |
 | [공식 문서 링크](../../resources/공식문서-링크.md) | 책 전반에서 쓰는 공식 문서 모음 | 1장 이후 |
-
-## 공식 문서
-
-| 문서 | URL | 설명 |
-| --- | --- | --- |
-| 클로드 지원 센터 | https://support.claude.com | 클로드 기능, 플랜, 문제 해결을 확인하는 공식 지원 허브입니다. |
-| 모델 개요 | https://docs.anthropic.com/en/docs/about-claude/models/overview | Opus, Sonnet, Haiku 등 클로드 모델의 차이를 확인할 수 있습니다. |
-| 앤트로픽 연구 | https://www.anthropic.com/research | 안전성, 해석가능성, 모델 연구 흐름을 살펴볼 수 있습니다. |
 
 ## 추천 자료
 
 | 자료 | URL | 설명 |
 | --- | --- | --- |
-| Claude's Constitution | https://www.anthropic.com/constitution | 클로드가 어떤 원칙으로 응답하도록 설계되는지 이해하는 데 도움이 되는 공개 문서입니다. |
-| 앤트로픽 공식 블로그 | https://www.anthropic.com/news | 클로드 제품 업데이트와 회사 소식을 확인할 수 있습니다. |
+| anthropics/model-spec | https://github.com/anthropics/model-spec | 클로드 모델 행동·안전 스펙 |
+| Claude's Constitution | https://www.anthropic.com/constitution | 클로드 응답 원칙 |
+| 앤트로픽 연구 | https://www.anthropic.com/research | 안전성·모델 연구 |
+| 클로드 상태 페이지 | https://status.claude.com | 서비스 가동 상태 |
+
+## 공식 문서
+
+| 문서 | URL | 설명 |
+| --- | --- | --- |
+| 클로드 지원 센터 | https://support.claude.com | 클로드 기능, 플랜, 문제 해결 |
+| 모델 개요 | https://docs.anthropic.com/en/docs/about-claude/models/overview | Opus, Sonnet, Haiku 등 모델 비교 |
