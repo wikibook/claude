@@ -51,8 +51,7 @@
 ## Superpowers — 체계적인 개발 워크플로
 
 책 7장은 "말로 일을 시키고 결과를 확인한다"는 흐름을 다룹니다.
-한 단계 더 나아가 **설계 → 계획 → 서브에이전트 실행 → 테스트 → 리뷰**까지 자동으로 이어지게 하려면
-[obra/superpowers](https://github.com/obra/superpowers)를 참고하세요.
+한 단계 더 나아가 **설계 → 계획 → 서브에이전트 실행 → 테스트 → 리뷰**까지 자동으로 이어지게 하려면 [obra/superpowers](https://github.com/obra/superpowers)를 참고하세요.
 
 | 항목 | 내용 |
 | --- | --- |
@@ -102,8 +101,7 @@ npx skills add mattpocock/skills
 ## gstack — 역할별 슬래시 명령 팀
 
 [garrytan/gstack](https://github.com/garrytan/gstack)는 클로드 코드에 **가상 엔지니어링 팀**을 붙이는 오픈소스 도구입니다.
-`/office-hours`로 제품을 정리하고, `/plan-ceo-review`·`/plan-eng-review`로 계획을 검토한 뒤,
-`/review`·`/qa`·`/ship`으로 리뷰·테스트·PR까지 이어갑니다.
+`/office-hours`로 제품을 정리하고, `/plan-ceo-review`·`/plan-eng-review`로 계획을 검토한 뒤, `/review`·`/qa`·`/ship`으로 리뷰·테스트·PR까지 이어갑니다.
 
 | 항목 | 내용 |
 | --- | --- |

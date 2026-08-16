@@ -61,8 +61,7 @@ npx skills add anthropics/skills --list    # 목록만 보기
 
 ## 공식 스킬 저장소 — 네 가지 도메인
 
-앤트로픽 공식 스킬 저장소([anthropics/skills](https://github.com/anthropics/skills))의
-`skills/` 폴더에는 예시 스킬이 네 도메인으로 묶여 있습니다(책 4.2.1절).
+앤트로픽 공식 스킬 저장소([anthropics/skills](https://github.com/anthropics/skills))의 `skills/` 폴더에는 예시 스킬이 네 도메인으로 묶여 있습니다(책 4.2.1절).
 각 스킬 폴더를 통째로 받아 `SKILL.md`를 열어보면 작성 방식을 익히기 좋습니다.
 
 | 도메인 | 공식 예시 스킬 | 어떤 일에 쓰나 |
